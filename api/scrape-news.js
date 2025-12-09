@@ -78,6 +78,10 @@ export default async function handler(req, res) {
         const subpageHtml = (await axios.get(news.url)).data;
         const $sub = cheerio.load(subpageHtml);
 
+        // Získaj dátum z span.ext-date
+        const dateSpan = $sub("span.ext-date").text().trim();
+        const newsDate = dateSpan || null;
+
         // Získaj všetky <p> tagy z div#text
         const paragraphs = [];
         $sub("div#text p").each((i, el) => {
@@ -103,6 +107,7 @@ export default async function handler(req, res) {
             url: news.url,
             content: content,
             keywords: keywords,
+            published_date: newsDate,
             scraped_at: new Date().toISOString()
           });
 

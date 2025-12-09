@@ -74,14 +74,25 @@ class RAGSystem {
     
     const results = allScores
       .filter(item => item.relevanceScore > 0)
-      .sort((a, b) => b.relevanceScore - a.relevanceScore)
+      .sort((a, b) => {
+        // Primárne triedenie podľa relevancie
+        if (Math.abs(a.relevanceScore - b.relevanceScore) > 5) {
+          return b.relevanceScore - a.relevanceScore;
+        }
+        // Sekundárne triedenie pre novinky s podobnou relevanciou podľa dátumu
+        if (a.category === "Novinky" && b.category === "Novinky" && a.date && b.date) {
+          return this.compareDates(b.date, a.date); // novšie novinky vyššie
+        }
+        return b.relevanceScore - a.relevanceScore;
+      })
       .slice(0, maxResults);
 
     console.log('✅ RAG Search Results:', results.map(r => ({ 
       id: r.id, 
       title: r.title.substring(0, 60), 
       category: r.category,
-      score: r.relevanceScore.toFixed(2)
+      score: r.relevanceScore.toFixed(2),
+      date: r.date || 'N/A'
     })));
     
     if (results.length > 0 && results[0].relevanceScore < 10) {
@@ -296,6 +307,27 @@ class RAGSystem {
   }
 
   // Získanie štatistík databázy
+  // Porovnanie dátumov (podporuje formáty: DD.MM.YYYY, YYYY-MM-DD, ISO)
+  compareDates(date1, date2) {
+    const parseDate = (dateStr) => {
+      if (!dateStr) return new Date(0);
+      
+      // DD.MM.YYYY
+      if (dateStr.match(/^\d{1,2}\.\d{1,2}\.\d{4}$/)) {
+        const [day, month, year] = dateStr.split('.').map(Number);
+        return new Date(year, month - 1, day);
+      }
+      
+      // Ostatné formáty (ISO, YYYY-MM-DD)
+      return new Date(dateStr);
+    };
+    
+    const d1 = parseDate(date1);
+    const d2 = parseDate(date2);
+    
+    return d1 - d2;
+  }
+
   getStats() {
     const categories = [...new Set(this.knowledgeBase.map(item => item.category))];
     return {

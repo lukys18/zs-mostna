@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     // Načítaj všetky novinky z databázy
     const { data: news, error } = await SUPA
       .from("school_news")
-      .select("id, category, title, content, keywords, url")
+      .select("id, category, title, content, keywords, url, published_date")
       .order("scraped_at", { ascending: false });
 
     if (error) {
@@ -30,7 +30,8 @@ export default async function handler(req, res) {
       title: item.title,
       content: item.content,
       keywords: item.keywords || [],
-      link: item.url
+      link: item.url,
+      date: item.published_date
     }));
 
     res.status(200).json({
