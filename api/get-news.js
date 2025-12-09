@@ -13,10 +13,11 @@ export default async function handler(req, res) {
       return res.status(200).end();
     }
 
-    // Načítaj všetky novinky z databázy
+    // Načítaj všetky novinky z databázy (triedené podľa dátumu publikácie)
     const { data: news, error } = await SUPA
       .from("school_news")
       .select("id, category, title, content, keywords, url, published_date")
+      .order("published_date", { ascending: false, nullsLast: true })
       .order("scraped_at", { ascending: false });
 
     if (error) {

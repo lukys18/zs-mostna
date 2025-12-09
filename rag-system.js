@@ -75,14 +75,14 @@ class RAGSystem {
     const results = allScores
       .filter(item => item.relevanceScore > 0)
       .sort((a, b) => {
-        // Primárne triedenie podľa relevancie
-        if (Math.abs(a.relevanceScore - b.relevanceScore) > 5) {
-          return b.relevanceScore - a.relevanceScore;
+        // Pre novinky: ak sú obe relevantné (score > 5), trieď podľa dátumu
+        if (a.category === "Novinky" && b.category === "Novinky") {
+          if (a.relevanceScore > 5 && b.relevanceScore > 5 && a.date && b.date) {
+            const dateDiff = this.compareDates(b.date, a.date); // novšie novinky vyššie
+            if (dateDiff !== 0) return dateDiff;
+          }
         }
-        // Sekundárne triedenie pre novinky s podobnou relevanciou podľa dátumu
-        if (a.category === "Novinky" && b.category === "Novinky" && a.date && b.date) {
-          return this.compareDates(b.date, a.date); // novšie novinky vyššie
-        }
+        // Inak trieď podľa relevancie
         return b.relevanceScore - a.relevanceScore;
       })
       .slice(0, maxResults);
@@ -307,19 +307,25 @@ class RAGSystem {
   }
 
   // Získanie štatistík databázy
-  // Porovnanie dátumov (podporuje formáty: DD.MM.YYYY, YYYY-MM-DD, ISO)
+  // Porovnanie dátumov (podporuje formáty: ISO, DD.MM.YYYY, YYYY-MM-DD)
   compareDates(date1, date2) {
     const parseDate = (dateStr) => {
       if (!dateStr) return new Date(0);
       
-      // DD.MM.YYYY
+      // Už je ISO formát alebo YYYY-MM-DD - priamo parsuj
+      const isoDate = new Date(dateStr);
+      if (!isNaN(isoDate.getTime())) {
+        return isoDate;
+      }
+      
+      // DD.MM.YYYY (fallback pre staršie dáta)
       if (dateStr.match(/^\d{1,2}\.\d{1,2}\.\d{4}$/)) {
         const [day, month, year] = dateStr.split('.').map(Number);
         return new Date(year, month - 1, day);
       }
       
-      // Ostatné formáty (ISO, YYYY-MM-DD)
-      return new Date(dateStr);
+      // Ak parsovanie zlyhá, vráť epoch
+      return new Date(0);
     };
     
     const d1 = parseDate(date1);

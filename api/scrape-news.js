@@ -6,6 +6,24 @@ const SUPA = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KE
 
 const NEWS_PAGE = "https://www.zsmostna.sk/";
 
+// Funkcia na parsovanie dátumu z formátu DD.MM.YYYY do ISO formátu
+function parseNewsDate(dateText) {
+  if (!dateText) return null;
+  
+  // Formát: "DD.MM.YYYY" alebo "D.M.YYYY"
+  const match = dateText.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+  if (match) {
+    const [, day, month, year] = match;
+    // Vytvor Date objekt (mesiace sú 0-indexed v JS)
+    const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+    // Vráť ISO formát pre konzistentné uloženie
+    return date.toISOString();
+  }
+  
+  // Ak parsovanie zlyhá, vráť null
+  return null;
+}
+
 // Funkcia na extrahovanie kľúčových slov z textu
 function extractKeywords(title, content) {
   const stopWords = new Set(['a', 'je', 'to', 'na', 'v', 'sa', 'so', 'pre', 'ako', 'že', 'ma', 'mi', 'me', 'si', 'su', 'som', 'ale', 'ani', 'az', 'ak', 'bo', 'by', 'co', 'ci', 'do', 'ho', 'im', 'ju', 'ka', 'ku', 'ly', 'ne', 'ni', 'no', 'od', 'po', 'pri', 'ro', 'ta', 'te', 'ti', 'tu', 'ty', 'uz', 'vo', 'za', 'kde', 'kto', 'ako', 'preco', 'kedy']);
@@ -78,9 +96,9 @@ export default async function handler(req, res) {
         const subpageHtml = (await axios.get(news.url)).data;
         const $sub = cheerio.load(subpageHtml);
 
-        // Získaj dátum z span.ext-date
+        // Získaj dátum z span.ext-date a parsuj ho do ISO formátu
         const dateSpan = $sub("span.ext-date").text().trim();
-        const newsDate = dateSpan || null;
+        const newsDate = parseNewsDate(dateSpan);
 
         // Získaj všetky <p> tagy z div#text
         const paragraphs = [];
