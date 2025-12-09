@@ -202,8 +202,8 @@ class RAGSystem {
       score += 20;
     }
     
-    // Bonus za link
-    if (item.link && item.link !== '') {
+    // Bonus za link/url
+    if ((item.link && item.link !== '') || (item.url && item.url !== '')) {
       score += 2;
     }
 
@@ -293,8 +293,10 @@ class RAGSystem {
         }
         contextPart += `:\n${item.content}`;
         
-        if (item.link && item.link !== '') {
-          contextPart += `\n📎 Link: ${item.link}`;
+        // Podporuj url aj link (url má prioritu)
+        const itemUrl = item.url || item.link;
+        if (itemUrl && itemUrl !== '') {
+          contextPart += `\n📎 Link: ${itemUrl}`;
         }
         
         return contextPart;

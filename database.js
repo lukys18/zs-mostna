@@ -656,7 +656,7 @@ window.aiPowerData = {
     "title": "Informácie o škole - webová stránka",
     "content": "Komplexné informácie o Základnej škole na Mostnej ulici v Nových Zámkoch sú dostupné na oficiálnej webovej stránke školy. Stránka obsahuje aktuálne správy, dokumenty, kontakty a ďalšie dôležité informácie pre žiakov, rodičov a návštevníkov.",
     "keywords": ["webová stránka", "informácie", "aktuálne správy", "dokumenty", "kontakty"],
-    "link": "https://www.zsmostna.sk/1229-informacie-o-skole"
+    "link": "https://www.zsmostna.sk/"
 },
 
 
