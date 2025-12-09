@@ -291,6 +291,13 @@ class RAGSystem {
         if (item.id) {
           contextPart += ` (ID: ${item.id})`;
         }
+        
+        // Pridaj dátum ak existuje
+        if (item.date && item.date !== 'N/A') {
+          const formattedDate = this.formatDate(item.date);
+          contextPart += `\n📅 Dátum: ${formattedDate}`;
+        }
+        
         contextPart += `:\n${item.content}`;
         
         // Podporuj url aj link (url má prioritu)
@@ -312,7 +319,12 @@ class RAGSystem {
       ? '\n\n⚠️ KONTAKTY: Pri odpovedaní na otázky o kontaktoch použi PRESNE uvedené kontaktné údaje. Neuvádzaj žiadne vymyslené kontakty.'
       : '';
     
-    return `INFORMÁCIE O ZŠ MOSTNÁ V NOVÝCH ZÁMKOCH (používaj LEN tieto fakty):\n\n${context}\n\n📌 INŠTRUKCIE: Odpovedaj PRESNE podľa týchto informácií z databázy. NEPRÍDÁVAJ žiadne vlastné interpretácie alebo detaily, ktoré nie sú explicitne uvedené. Ak informácia nie je v kontexte, POVEDZ to a odporuč kontaktovanie sekretariátu školy. Buď priateľský a nápomocný.${contactNote}`;
+    const hasDateInfo = relevantContent.some(item => item.date && item.date !== 'N/A');
+    const dateNote = hasDateInfo
+      ? '\n\n⚠️ DÁTUMY: Ak sú pri informáciách uvedené dátumy (📅 Dátum:), VŽDY ich použi v odpovedi. Keď používateľ pýta "kedy", odpovedz s konkrétnym dátumom.'
+      : '';
+    
+    return `INFORMÁCIE O ZŠ MOSTNÁ V NOVÝCH ZÁMKOCH (používaj LEN tieto fakty):\n\n${context}\n\n📌 INŠTRUKCIE: Odpovedaj PRESNE podľa týchto informácií z databázy. NEPRÍDÁVAJ žiadne vlastné interpretácie alebo detaily, ktoré nie sú explicitne uvedené. Ak informácia nie je v kontexte, POVEDZ to a odporuč kontaktovanie sekretariátu školy. Buď priateľský a nápomocný.${contactNote}${dateNote}`;
   }
 
   // Vyhľadávanie podľa ID
@@ -336,6 +348,32 @@ class RAGSystem {
   }
 
   // Získanie štatistík databázy
+  // Formátovanie dátumu na čitateľný formát DD.MM.YYYY
+  formatDate(dateStr) {
+    if (!dateStr) return 'N/A';
+    
+    try {
+      // Parsuj ISO alebo iný formát
+      const date = new Date(dateStr);
+      if (isNaN(date.getTime())) {
+        // Ak už je v DD.MM.YYYY formáte, vráť to tak
+        if (dateStr.match(/^\d{1,2}\.\d{1,2}\.\d{4}$/)) {
+          return dateStr;
+        }
+        return 'N/A';
+      }
+      
+      // Formátuj do DD.MM.YYYY
+      const day = date.getDate().toString().padStart(2, '0');
+      const month = (date.getMonth() + 1).toString().padStart(2, '0');
+      const year = date.getFullYear();
+      
+      return `${day}.${month}.${year}`;
+    } catch (e) {
+      return 'N/A';
+    }
+  }
+
   // Porovnanie dátumov (podporuje formáty: ISO, DD.MM.YYYY, YYYY-MM-DD)
   compareDates(date1, date2) {
     const parseDate = (dateStr) => {
