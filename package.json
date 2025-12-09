@@ -4,10 +4,13 @@
   "type": "module",
   "scripts": {
     "dev": "vercel dev",
-    "test-rag": "echo 'Otvor rag-test.html v prehliadači pre testovanie RAG systému'"
+    "test-rag": "echo 'Otvor rag-test.html v prehliadači pre testovanie RAG systému'",
+    "scrape": "node --no-warnings test-scrape.js",
+    "test-news": "node --no-warnings test-get-news.js"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.39.0"
-  },
-  "devDependencies": {}
+    "@supabase/supabase-js": "^2.39.0",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3"
+  }
 }

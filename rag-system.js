@@ -4,6 +4,8 @@
 class RAGSystem {
   constructor(knowledgeBase) {
     this.knowledgeBase = knowledgeBase;
+    this.newsLoaded = false;
+    this.loadNewsFromAPI(); // Automaticky načítaj news pri inicializácii
     this.stopWords = new Set([
       'a', 'je', 'to', 'na', 'v', 'sa', 'so', 'pre', 'ako', 'že', 'ma', 'mi', 'me', 'si', 'su', 'som',
       'ale', 'ani', 'az', 'ak', 'bo', 'by', 'co', 'ci', 'do', 'ho', 'im', 'ju', 'ka', 'ku', 'ly',
@@ -27,8 +29,31 @@ class RAGSystem {
       'známka': ['znamky', 'hodnotenie', 'vysvedcenie'],
       'projekt': ['projekty', 'sutaz', 'olympiada'],
       'šport': ['sport', 'telesna', 'telocvik', 'sportovy'],
-      'akcia': ['akcie', 'podujatie', 'vylety', 'exkurzia']
+      'akcia': ['akcie', 'podujatie', 'vylety', 'exkurzia'],
+      'novinka': ['novinky', 'aktuality', 'news', 'informacie', 'oznam']
     };
+  }
+
+  // Načítaj novinky z API a pridaj ich do knowledge base
+  async loadNewsFromAPI() {
+    if (this.newsLoaded) return;
+    
+    try {
+      console.log('📰 Načítavam novinky z databázy...');
+      const response = await fetch('/api/get-news');
+      const data = await response.json();
+      
+      if (data.success && data.news && data.news.length > 0) {
+        // Pridaj novinky do existujúcej knowledge base
+        this.knowledgeBase = [...this.knowledgeBase, ...data.news];
+        this.newsLoaded = true;
+        console.log(`✅ Načítaných ${data.news.length} noviniek`);
+      } else {
+        console.log('⚠️ Žiadne novinky v databáze');
+      }
+    } catch (error) {
+      console.error('❌ Chyba pri načítaní noviniek:', error);
+    }
   }
 
   // Hlavná metóda pre vyhľadávanie relevantného obsahu
