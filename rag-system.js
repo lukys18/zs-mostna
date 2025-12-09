@@ -63,6 +63,33 @@ class RAGSystem {
     const bigrams = this.extractBigrams(normalizedQuery);
     const expandedWords = this.expandWithSynonyms(queryWords);
     
+    // Detekcia časových dotazov (najnovšia, posledná, aktuálna novinka/aktualita)
+    const isTemporalQuery = /\b(najnov|posledn|aktual|nedavn|nova|nove|nova novinka|co je nove)\b/i.test(normalizedQuery);
+    const isNewsQuery = /\b(novink|aktualit|oznam|informaci|news)\b/i.test(normalizedQuery);
+    
+    // Ak ide o časový dotaz o novinky, filtruj len novinky a zoraď podľa dátumu
+    if (isTemporalQuery && isNewsQuery) {
+      console.log('🕒 Detekovaný časový dotaz o novinky - filtrujem a triedim podľa dátumu');
+      const newsItems = this.knowledgeBase
+        .filter(item => item.category === "Novinky")
+        .sort((a, b) => {
+          if (a.date && b.date) {
+            return this.compareDates(b.date, a.date); // najnovšie hore
+          }
+          return 0;
+        })
+        .slice(0, maxResults);
+      
+      console.log('✅ RAG Search Results (Časový dotaz):', newsItems.map(r => ({ 
+        id: r.id, 
+        title: r.title.substring(0, 60), 
+        category: r.category,
+        date: r.date || 'N/A'
+      })));
+      
+      return newsItems;
+    }
+    
     if (queryWords.length === 0 && bigrams.length === 0) {
       return [];
     }
