@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ZŠ Mostná - Asistent</title>
+  <meta name="description" content="AI asistent Základnej školy Mostná v Nových Zámkoch - pomoc pre rodičov, žiakov a návštevníkov">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="bot.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "iCicHuzNS-i1Q67lH",
+      });
+    })();
+  </script>
+</head>
+<body>
+  <div id="chatbot-container" class="closed">
+    <div id="chatbot-header" onclick="toggleChatbot()">
+      <div class="user-info">
+        <div class="avatar-wrapper">
+          <div class="avatar-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="status-indicator"></div>
+        </div>
+        <div class="user-details">
+          <div class="user-name">Asistent ZŠ Mostná</div>
+          <div class="user-status">Online</div>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <button id="reset-chat-btn" onclick="resetChat(event)" title="Resetovať konverzáciu">
+          <i class="fas fa-redo"></i>
+        </button>
+        <span id="toggle-icon">+</span>
+      </div>
+    </div>
+
+    <div id="chatbot-header-closed" onclick="toggleChatbot()" style="display: none;">
+      <span class="closed-bot-text">Asistent ZŠ Mostná</span>
+    </div>
+
+    <div id="chatbot-body">
+      <div id="chat-messages"></div>
+      <div id="input-area">
+        <textarea id="user-input" placeholder="Napíšte správu..."></textarea>
+        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+      </div>
+      <div id="chatbot-footer">
+        Made by <a href="https://ragnetiq.com/" target="_blank" rel="noopener noreferrer">Ragnetiq</a>
+      </div>
+    </div>
+  </div>
+
+<script src="database.js"></script>
+<script src="rag-system.js"></script>
+
+<script>
+  let sessionId = null;
+  let messageIndex = 0;
+  let emailSubmittedInSession = false;
+  let ipAddress = null;
+  let geoLocationCity = null;
+  
+  function getSessionId() {
+    if (!sessionId) {
+      sessionId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+    return sessionId;
+  }
+  
+  function markEmailSubmittedForSession() {
+    emailSubmittedInSession = true;
+  }
+  
+  async function initializeIPAndGeo() {
+    try {
+      const ipResponse = await fetch('https://api.ipify.org?format=json');
+      const ipData = await ipResponse.json();
+      ipAddress = ipData.ip;
+      
+      const geoResponse = await fetch(`https://ipapi.co/${ipAddress}/json/`);
+      const geoData = await geoResponse.json();
+      geoLocationCity = geoData.city || null;
+    } catch (error) {
+      console.error('Chyba pri získavaní IP/Geo:', error);
+    }
+  }
+  
+  function categorizeMessage(message) {
+    const msgLower = message.toLowerCase();
+    
+    if (msgLower.includes('rozvrh') || msgLower.includes('hodina') || msgLower.includes('vyučovanie')) {
+      return 'rozvrh';
+    } else if (msgLower.includes('kontakt') || msgLower.includes('email') || msgLower.includes('telefón')) {
+      return 'kontakt';
+    } else if (msgLower.includes('krúžok') || msgLower.includes('záujmov') || msgLower.includes('aktivit')) {
+      return 'krúžky';
+    } else if (msgLower.includes('jedáleň') || msgLower.includes('strava') || msgLower.includes('obed')) {
+      return 'jedáleň';
+    } else if (msgLower.includes('zápis') || msgLower.includes('prihlás') || msgLower.includes('prváčik')) {
+      return 'zápis';
+    } else {
+      return 'všeobecné';
+    }
+  }
+  
+  let chatHistory = [
+    {
+      role: "system",
+      content: "Si priateľský a profesionálny asistent Základnej školy Mostná v Nových Zámkoch. Máš prístup k rozsiahlej databáze obsahujúcej kompletné informácie o škole - históriu, organizáciu, zamestnancov, vzdelávacie programy, dokumenty, školský poriadok, výchovné poradenstvo, školské služby (psychológ, špeciálni pedagógovia), stravovanie, kontakty a mnoho ďalšieho.\n\nZÁKLADNÉ PRAVIDLÁ:\n- Komunikuješ priateľsky a profesionálne, vhodne pre rodičov, žiakov aj návštevníkov\n- Všetky odpovede MUSÍŠ zakladať VÝHRADNE na informáciách z poskytnutého kontextu\n- Odpovede sú presné, konkrétne a dobre štruktúrované\n- PAMÄTAJ SI KONTEXT celej konverzácie\n- Ak dostaneš kontext z databázy (označený 'INFORMÁCIE O ZŠ MOSTNÁ'), VŽDY ho použi ako jediný zdroj pravdy\n\nPRÁCA S KONTEXTOM:\n- Keď dostaneš relevantný kontext z databázy, odpovedaj PRESNE podľa neho\n- Cituj konkrétne fakty, mená, dátumy, čísla a údaje z kontextu\n- Pri kontaktných údajoch (telefón, email, adresa) uvádzaj LEN tie z kontextu - NIKDY si ich nevymýšľaj\n- Ak je v kontexte link, VŽDY ho uveď na konci odpovede\n\nFORMÁTOVANIE:\n- Odpovede štruktúruj prehľadne (odrážky, krátke odseky)\n- Pri linkoch: NIKDY nedávaj bodku, čiarku ani iný znak za URL!\n- Pri menách zamestnancov uvádzaj ich tituly a vyučované predmety (ak sú uvedené)\n\nKEĎ NEVIEŠ ODPOVEĎ:\n- Ak informácia NIE JE v poskytnutom kontexte, priamo to povedz\n- Odporuč kontaktovanie sekretariátu školy na tel. 035 6420 771 alebo email zsmostna@azet.sk\n- NIKDY si nevymýšľaj informácie, ktoré nie sú v databáze"
+    }
+  ];
+
+  let ragSystem = null;
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    getSessionId();
+    initializeIPAndGeo();
+    
+    if (window.aiPowerData && window.RAGSystem) {
+      ragSystem = new window.RAGSystem(window.aiPowerData.knowledgeBase);
+      console.log('RAG systém inicializovaný s', window.aiPowerData.knowledgeBase.length, 'záznamami');
+    }
+    
+    appendMessage("Asistent", "Dobrý deň! 👋 Som asistent Základnej školy Mostná v Nových Zámkoch. Rád vám pomôžem s informáciami o našej škole. Môžete sa ma opýtať na čokoľvek alebo si vybrať z ponúkaných možností.", "bot", false, false, false);
+    showCategoryButtons();
+  });
+
+  const chatbox = document.getElementById("chat-messages");
+  const inputField = document.getElementById("user-input");
+
+  if (window.self !== window.top) {
+    document.body.classList.add('iframe-mode');
+    const container = document.getElementById("chatbot-container");
+    if (container) {
+      container.classList.add('closed');
+    }
+  }
+
+  window.addEventListener("message", function(event) {
+    const container = document.getElementById("chatbot-container");
+    const openHeader = document.getElementById("chatbot-header");
+    const closedHeader = document.getElementById("chatbot-header-closed");
+    const icon = document.getElementById("toggle-icon");
+    
+    if (event.data.type === "widget-opened") {
+      if (container) {
+        container.classList.remove('closed');
+        if (openHeader) openHeader.style.display = "flex";
+        if (closedHeader) closedHeader.style.display = "none";
+        if (icon) icon.innerText = "−";
+      }
+    } else if (event.data.type === "widget-closed") {
+      if (container) {
+        container.classList.add('closed');
+        if (openHeader) openHeader.style.display = "none";
+        if (closedHeader) closedHeader.style.display = "flex";
+        if (icon) icon.innerText = "+";
+      }
+    }
+  });
+
+  inputField.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  function toggleChatbot() {
+    const container = document.getElementById("chatbot-container");
+    const openHeader = document.getElementById("chatbot-header");
+    const closedHeader = document.getElementById("chatbot-header-closed");
+    const icon = document.getElementById("toggle-icon");
+    
+    if (window.parent !== window && window.self !== window.top) {
+      window.parent.postMessage({ type: "chatbot-toggle" }, "*");
+      return;
+    }
+    
+    container.classList.toggle("closed");
+    
+    if (container.classList.contains("closed")) {
+      if (openHeader) openHeader.style.display = "none";
+      if (closedHeader) closedHeader.style.display = "flex";
+      if (icon) icon.innerText = "+";
+    } else {
+      if (openHeader) openHeader.style.display = "flex";
+      if (closedHeader) closedHeader.style.display = "none";
+      if (icon) icon.innerText = "−";
+    }
+  }
+
+  function resetChat(event) {
+    event.stopPropagation();
+    
+    sessionId = null;
+    messageIndex = 0;
+    emailSubmittedInSession = false;
+    getSessionId();
+    
+    chatHistory = [
+      {
+        role: "system",
+        content: "Si priateľský a profesionálny asistent Základnej školy Mostná v Nových Zámkoch. Máš prístup k rozsiahlej databáze obsahujúcej kompletné informácie o škole - históriu, organizáciu, zamestnancov, vzdelávacie programy, dokumenty, školský poriadok, výchovné poradenstvo, školské služby (psychológ, špeciálni pedagógovia), stravovanie, kontakty a mnoho ďalšieho.\n\nZÁKLADNÉ PRAVIDLÁ:\n- Komunikuješ priateľsky a profesionálne, vhodne pre rodičov, žiakov aj návštevníkov\n- Všetky odpovede MUSÍŠ zakladať VÝHRADNE na informáciách z poskytnutého kontextu\n- Odpovede sú presné, konkrétne a dobre štruktúrované\n- PAMÄTAJ SI KONTEXT celej konverzácie\n- Ak dostaneš kontext z databázy (označený 'INFORMÁCIE O ZŠ MOSTNÁ'), VŽDY ho použi ako jediný zdroj pravdy\n\nPRÁCA S KONTEXTOM:\n- Keď dostaneš relevantný kontext z databázy, odpovedaj PRESNE podľa neho\n- Cituj konkrétne fakty, mená, dátumy, čísla a údaje z kontextu\n- Pri kontaktných údajoch (telefón, email, adresa) uvádzaj LEN tie z kontextu - NIKDY si ich nevymýšľaj\n- Ak je v kontexte link, VŽDY ho uveď na konci odpovede\n\nFORMÁTOVANIE:\n- Odpovede štruktúruj prehľadne (odrážky, krátke odseky)\n- Pri linkoch: NIKDY nedávaj bodku, čiarku ani iný znak za URL!\n- Pri menách zamestnancov uvádzaj ich tituly a vyučované predmety (ak sú uvedené)\n\nKEĎ NEVIEŠ ODPOVEĎ:\n- Ak informácia NIE JE v poskytnutom kontexte, priamo to povedz\n- Odporuč kontaktovanie sekretariátu školy na tel. 035 6420 771 alebo email zsmostna@azet.sk\n- NIKDY si nevymýšľaj informácie, ktoré nie sú v databáze"
+      }
+    ];
+    
+    chatbox.innerHTML = '';
+    
+    appendMessage("Asistent", "Dobrý deň! 👋 Som asistent Základnej školy Mostná v Nových Zámkoch. Rád vám pomôžem s informáciami o našej škole. Môžete sa ma opýtať na čokoľvek alebo si vybrať z ponúkaných možností.", "bot", false, false, false);
+    showCategoryButtons();
+    
+    chatbox.scrollTop = 0;
+  }
+
+  function createContactForm() {
+    const formId = 'contact-form-' + Date.now();
+    return `
+      <div class="contact-form">
+        <h4>Kontaktujte nás</h4>
+        <p style="font-size: 0.9em; color: #666; margin-bottom: 15px;">
+          Pre ďalšie informácie nás kontaktujte:<br>
+          <strong>Sekretariát ZŠ Mostná</strong>
+        </p>
+        <form id="${formId}" onsubmit="handleContactSubmit(event, '${formId}')">
+          <div class="form-group">
+            <label for="${formId}-name">Meno a priezvisko *</label>
+            <input type="text" id="${formId}-name" name="from_name" placeholder="Vaše meno a priezvisko" required>
+          </div>
+          <div class="form-group">
+            <label for="${formId}-email">Email *</label>
+            <input type="email" id="${formId}-email" name="from_email" placeholder="vas@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="${formId}-message">Správa *</label>
+            <textarea id="${formId}-message" name="message" placeholder="Opíšte vašu otázku..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn" id="${formId}-submit">
+            Odoslať správu
+          </button>
+        </form>
+      </div>
+    `;
+  }
+
+  function handleContactSubmit(event, formId) {
+    event.preventDefault();
+    
+    const submitBtn = document.getElementById(formId + '-submit');
+    const form = document.getElementById(formId);
+    
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Odosielam...';
+    
+    emailjs.sendForm('service_6mmgtes', 'template_y5c7peq', '#' + formId)
+      .then(
+        (response) => {
+          markEmailSubmittedForSession();
+          messageIndex++;
+          const emailMessageIndex = messageIndex;
+          
+          const botSuccessMessage = "🎉 **Ďakujeme!** Vaša správa bola úspešne odoslaná. Odpovieme vám čo najskôr.";
+          appendMessage("Asistent", botSuccessMessage, "bot");
+          
+          saveEmailEventToAPI(botSuccessMessage, emailMessageIndex);
+          
+          const formContainer = form.closest('.contact-form').parentElement;
+          if (formContainer) {
+            formContainer.style.display = 'none';
+          }
+        },
+        (error) => {
+          appendMessage("Asistent", "**Ups!** Nastala chyba pri odosielaní správy. Skúste to prosím znovu.", "bot");
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Odoslať správu';
+        }
+      );
+  }
+
+  function showContactForm(buttonElement) {
+    buttonElement.style.display = 'none';
+    
+    const contactFormDiv = document.createElement('div');
+    contactFormDiv.innerHTML = createContactForm();
+    
+    buttonElement.parentNode.insertBefore(contactFormDiv, buttonElement.nextSibling);
+    
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  async function handleQuickReplyWithRAG(query) {
+    messageIndex++;
+    const currentMessageIndex = messageIndex;
+    
+    chatHistory.push({ role: "user", content: query });
+    appendMessage("Asistent", '<div class="typing-indicator"><span></span><span></span><span></span></div>', "bot", true);
+
+    const startTime = Date.now();
+    let detectedCategory = 'všeobecné';
+
+    try {
+      await delay(800);
+
+      let relevantContent = [];
+      let ragContext = '';
+      let sources = [];
+      let useRAG = false;
+
+      if (ragSystem) {
+        relevantContent = ragSystem.searchRelevantContent(query, 5);
+        if (relevantContent.length > 0) {
+          ragContext = ragSystem.buildContext(relevantContent);
+          sources = relevantContent.map(item => item.title);
+          useRAG = true;
+          detectedCategory = relevantContent[0].category || 'všeobecné';
+        }
+      }
+      
+      if (!useRAG) {
+        detectedCategory = categorizeMessage(query);
+      }
+
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          messages: chatHistory,
+          useRAG: useRAG,
+          ragContext: ragContext,
+          sources: sources
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Chyba ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      let reply = data.choices?.[0]?.message?.content?.trim() || "Prepáčte, neviem na to odpovedať.";
+
+      const timeToRespond = Date.now() - startTime;
+      const isContactRelated = reply.includes("kontakt") || reply.includes("telefón") || reply.includes("email");
+
+      removeLastBotMessage();
+      appendMessage("Asistent", reply, "bot", false, false, isContactRelated);
+      chatHistory.push({ role: "assistant", content: reply });
+
+      await saveChatToAPI(query, reply, currentMessageIndex, timeToRespond, detectedCategory);
+
+    } catch (error) {
+      console.error("Chyba:", error);
+      removeLastBotMessage();
+      appendMessage("Asistent", "Na túto otázku neviem dostatočne odpovedať. Pre viac informácií kontaktujte prosím sekretariát školy.", "bot", false, false, true);
+    }
+  }
+
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  function showCategoryButtons() {
+    const quickRepliesDiv = document.createElement('div');
+    quickRepliesDiv.className = 'quick-replies';
+    
+    const mainCategories = [
+      { text: 'O škole', query: 'Základné informácie o škole' },
+      { text: 'Kontakt', query: 'Kontaktné údaje školy' },
+      { text: 'Krúžky', query: 'Aké krúžky ponúkate?' },
+      { text: 'Mám inú otázku', query: 'Mám inú otázku' }
+    ];
+    
+    mainCategories.forEach(category => {
+      const btn = document.createElement('button');
+      btn.className = 'quick-reply-btn';
+      btn.innerHTML = category.text;
+      
+      btn.onclick = () => {
+        appendMessage("Ty", category.text, "user");
+        
+        if (category.query === "Mám inú otázku") {
+          appendMessage("Asistent", "Samozrejme! Opýtajte sa ma na čokoľvek týkajúce sa našej školy. Som tu, aby som vám pomohol. 😊", "bot");
+          return;
+        }
+        
+        handleQuickReplyWithRAG(category.query);
+      };
+      
+      quickRepliesDiv.appendChild(btn);
+    });
+    
+    chatbox.appendChild(quickRepliesDiv);
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  async function saveChatToAPI(userMessage, botResponse, messageIdx, timeToRespond, category) {
+    try {
+      const website = window.location.hostname;
+      
+      const response = await fetch('/api/saveChat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userMessage: userMessage,
+          botResponse: botResponse,
+          website: website,
+          ipAddress: ipAddress,
+          sessionId: getSessionId(),
+          messageIndex: messageIdx,
+          timeToRespond: timeToRespond,
+          category: category,
+          geoLocationCity: geoLocationCity,
+          emailSubmitted: emailSubmittedInSession
+        })
+      });
+
+      if (response.ok) {
+        console.log('Chat conversation saved successfully');
+      }
+    } catch (error) {
+      console.error('Error saving chat to API:', error);
+    }
+  }
+
+  async function saveEmailEventToAPI(botSuccessMessage, emailMessageIndex) {
+    try {
+      const website = window.location.hostname;
+      
+      await fetch('/api/saveChat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userMessage: 'Správa poslaná',
+          botResponse: botSuccessMessage,
+          website: website,
+          ipAddress: ipAddress,
+          sessionId: getSessionId(),
+          messageIndex: emailMessageIndex,
+          timeToRespond: null,
+          category: 'Email',
+          geoLocationCity: geoLocationCity,
+          emailSubmitted: true
+        })
+      });
+    } catch (error) {
+      console.error('Error saving email event:', error);
+    }
+  }
+
+  async function sendMessage() {
+    const message = inputField.value.trim();
+    if (!message) return;
+
+    messageIndex++;
+    const currentMessageIndex = messageIndex;
+
+    appendMessage("Ty", message, "user");
+    inputField.value = "";
+
+    chatHistory.push({ role: "user", content: message });
+
+    appendMessage("Asistent", '<div class="typing-indicator"><span></span><span></span><span></span></div>', "bot", true);
+
+    const startTime = Date.now();
+    let detectedCategory = 'všeobecné';
+
+    try {
+      await delay(800);
+
+      let relevantContent = [];
+      let ragContext = '';
+      let sources = [];
+      let useRAG = false;
+
+      if (ragSystem) {
+        relevantContent = ragSystem.searchRelevantContent(message, 5);
+        if (relevantContent.length > 0) {
+          ragContext = ragSystem.buildContext(relevantContent);
+          sources = relevantContent.map(item => item.title);
+          useRAG = true;
+          detectedCategory = relevantContent[0].category || 'všeobecné';
+        }
+      }
+      
+      if (!useRAG) {
+        detectedCategory = categorizeMessage(message);
+      }
+
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          messages: chatHistory,
+          useRAG: useRAG,
+          ragContext: ragContext,
+          sources: sources
+        })
+      });
+
+      if (!response.ok) {
+       throw new Error(`Chyba ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      let reply = data.choices?.[0]?.message?.content?.trim() || "Prepáčte, neviem na to odpovedať.";
+
+      const timeToRespond = Date.now() - startTime;
+
+      const isContactRelated = reply.includes("kontakt") || reply.includes("telefón") || reply.includes("email");
+
+      removeLastBotMessage();
+      appendMessage("Asistent", reply, "bot", false, false, isContactRelated);
+      chatHistory.push({ role: "assistant", content: reply });
+
+      await saveChatToAPI(message, reply, currentMessageIndex, timeToRespond, detectedCategory);
+
+    } catch (error) {
+      console.error("Chyba:", error);
+      removeLastBotMessage();
+      appendMessage("Asistent", "Na túto otázku neviem dostatočne odpovedať. Pre viac informácií kontaktujte prosím sekretariát školy.", "bot", false, false, true);
+    }
+  }
+
+  function appendMessage(sender, message, role, isTemp = false, showQuickReplies = false, showContactButton = false) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("message", role);
+    if (isTemp) msgDiv.classList.add("temp");
+
+    let formattedMessage = message.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    
+    formattedMessage = formattedMessage.replace(
+      /(https?:\/\/[^\s<)}\]]+?)([)}\].,;:!?]*)(?=\s|$|<)/g,
+      '<a href="$1" target="_blank">$1</a>$2'
+    );
+
+    msgDiv.innerHTML = formattedMessage;
+    chatbox.appendChild(msgDiv);
+    
+    if (role === 'bot' && showContactButton) {
+      const contactBtnDiv = document.createElement('div');
+      contactBtnDiv.innerHTML = `
+        <button class="contact-btn" onclick="showContactForm(this)">
+          <i class="fas fa-envelope"></i> Kontaktovať nás
+        </button>
+      `;
+      chatbox.appendChild(contactBtnDiv);
+    }
+
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  function removeLastBotMessage() {
+    const tempMsg = chatbox.querySelector(".bot.temp");
+    if (tempMsg) chatbox.removeChild(tempMsg);
+  }
+</script>
+</body>
+</html>
