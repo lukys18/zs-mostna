@@ -1358,7 +1358,1022 @@ window.aiPowerData = {
     "keywords": ["ypsilon", "slovenský jazyk", "súťaž", "literatúra", "diplom", "zlatá medaila", "úspešný riešitelia"],
     "date": "2025-02-20",
     "link": ""
+  },
+  {
+    "id": "uspechy_1",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2009/10",
+    "content": "Olympiáda slovenského jazyka: Ölveczká Henrieta IX. A – 3. miesto okresné kolo. Matematická olympiáda: Halmešová Petra V. A – 2. miesto v okresnom kole. Dejepisná olympiáda: Tlčina Andrej VI. A – 1. miesto v okresnom kole; Gallová Michaela VIII. B – 1. miesto v okresnom kole; Farkašová Lenka IX. C -1. miesto v okr. kole, 3. miesto v krajskom kole. Biologická olympiáda: Ondrušková Martina IX. B- 2. miesto okresné kolo, úsp. rieš. krajského kola. Geografická olympiáda: Budinský Jozef VII. A – 2. miesto okr. kolo, 5. miesto krajské kolo.",
+    "keywords": [
+      "olympiáda",
+      "slovenský jazyk",
+      "matematika",
+      "dejepis",
+      "biológia",
+      "geografia",
+      "okresné kolo",
+      "krajské kolo",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_2",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj 2009/10",
+    "content": "Družstvo dievčat – kategória A: 1. miesto Majstrovstvá Nitrianskeho kraja, 4. miesto M-SR: Bodokiová Rebecca I. A, Csutorová Gréta, Decsiová Lucia, Kaderábeková Barbora II. A, Weiss Sára III. B. Kategória B: 1. miesto Majstrovstvá Nitrianskeho kraja, 6. miesto M – SR: Zerdahelyová Monika, Aggová Karin, Solárová Dominika, Korpová Dominika V. A, Hrabovská Michaela V. B. Kategória C: 1. miesto Majstrovstvá Nitrianskeho kraja, 7. miesto M – SR: Brestovská Marcela, Hankóová Katarína VII. B, Ježová Denisa VIII. B, Galbavá Miroslava, Tóthová Jessica IX. B. Družstvo chlapcov – kategória A: 2. miesto Majstrovstvá Nitrianskeho kraja: Korpa Róbert I. A, Cvik Ján, Chovald Adam I. C, Šarfický Samuel II. A, Udvardi David III. B. Kategória B: 3. Miesto Majstrovstvá Nitrianskeho kraja: Decsi Roderik III. A, Huttner Adrián, Gelle Nikolas, Krutek Adam IV. A, Takács Martin IV. C.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "družstvo",
+      "dievčatá",
+      "chlapci",
+      "kategória A",
+      "kategória B",
+      "kategória C",
+      "Majstrovstvá Nitrianskeho kraja",
+      "M-SR",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_3",
+    "category": "Športové súťaže",
+    "title": "Plávanie a atletika 2009/10",
+    "content": "Plávanie - Majstrovstvá Nitrianskeho kraja: Polgár Michal VII. C – 2. miesto; Valko Sebastián VII. C – 2. miesto; Valková Vivien IV. C – 3. miesto. Atletika - Štafeta chlapci: 2. a 3. miesto: Polgár Michal, Valko Sebastián, Gróf Stanislav VII. C, Paulis Peter IX. A. Majstrovstvá okresu - Družstvo mladších žiačok: 2. miesto (zoznam žiačok). Družstvo mladších žiakov: 1. miesto (zoznam žiakov). Jednotlivci - viacero umiestnení v disciplínach ako štafeta, vrh guľou, hod loptičkou, skok do výšky, beh 1000m.",
+    "keywords": [
+      "plávanie",
+      "atletika",
+      "majstrovstvá kraja",
+      "majstrovstvá okresu",
+      "štafeta",
+      "jednotlivci",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_4",
+    "category": "Športové súťaže",
+    "title": "Orientačný beh, aerobik, vybíjaná, stolný tenis, florbal 2009/10",
+    "content": "Orientačný beh: Gallová Michaela VIII. B – 1. miesto v okresnom kole; Galbavá Miroslava IX. B - 1. miesto v okresnom kole družstvo, 3. miesto jednotl. Športový aerobik: Hrabovská Michaela V. B – 1. miesto MM SR; Brestovská Marcela VII. B – 5. miesto MM SR; štvorkrok (Ivolková Viktória a i.) – 2. miesto MM SR, 1. miesto SR, 1. miesto Federálny pohár. Vybíjaná: Družstvo dievčat – 2. miesto okresné kolo. Stolný tenis: Farkašová Lenka IX. C – 2. miesto; Taricsová Dominika VIII. B – 2. miesto; Karvašová Barbora IX. B – 3. miesto (všetky okresné kolo). Florbal: Mladší žiaci - 1. miesto okres, 3. miesto kraj; Starší žiaci - 1. miesto okres, 2. miesto kraj; Mladšie žiačky - 2. miesto okres; Staršie žiačky - 2. miesto okres.",
+    "keywords": [
+      "orientačný beh",
+      "športový aerobik",
+      "vybíjaná",
+      "stolný tenis",
+      "florbal",
+      "okresné kolo",
+      "krajské kolo",
+      "MM SR",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_5",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2009/10",
+    "content": "Prečo mám rád slovenčinu, Slovensko: Zmarková Zoja I. A– čestné uznanie celosl. súťaž. Európa v škole: Bohoš Patrik II. A – ocenená práca v okresnom kole; Sallaiová Veronika VI. A – ocenená práca v okresnom kole. Hliadka mladých zdravotníkov: 2. miesto v okresnom kole (Závodská Bibiana a i.). Život a dielo A. Bernoláka: Laczová Kristína, Hankóová Katarína, Kmeťová Mária VII. B – 1. miesto. Vesmír očami detí: Šimunek Marek – 3. miesto v okresnom kole súťaže.",
+    "keywords": [
+      "slovenčina",
+      "európa",
+      "mladí zdravotníci",
+      "Bernolák",
+      "vesmír",
+      "okresné kolo",
+      "celoslovenská súťaž",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_6",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2010/11",
+    "content": "Dejepisná olympiáda: Sucharda Adam VI.B – 3. miesto v okresnom kole; Virág Ladislav VI. B – 2. miesto v okresnom kole; Budinský Jozef VIII. A – 3. miesto v okresnom kole; Kocúnová Tatiana VIII. A - 2. miesto v okresnom kole, úsp. v krajskom kole. Geografická olympiáda: Budinský Jozef VIII. A – 3. miesto v okresnom kole. Olympiáda anglického jazyka: Gajdošík Richard VII. A – 3. miesto v okresnom kole.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "geografia",
+      "anglický jazyk",
+      "okresné kolo",
+      "krajské kolo",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_7",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj a športový aerobik 2010/11",
+    "content": "Gymnastický štvorboj: Csutorová Gréta III. A – 3. miesto M-SR, kategória A. Družstvá dievčat kategórie A, B, C s umiestneniami na Majstrovstvách Nitrianskeho kraja a M-SR. Družstvá chlapcov kategórie A, B s umiestneniami na Majstrovstvách Nitrianskeho kraja a M-SR. Športový aerobik: Slovak aerobik open – MM SR: Marázová Rebeca V.B – 4. miesto; Brestovská Marcela VIII.B – 5. miesto; Hrabovská Michaela VI.B – 1. miesto mix pár; štvorkrok (Brestovská Marcela a i.) – 1. miesto step junior.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "športový aerobik",
+      "MM SR",
+      "družstvo",
+      "kategória",
+      "Majstrovstvá Nitrianskeho kraja",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_8",
+    "category": "Športové súťaže",
+    "title": "Plávanie a atletika 2010/11",
+    "content": "Plávanie - Majstrovstvá okresu: Polgár Michal VIII. C – 1. miesto 100m a 400m; Valko Sebastián VIII. C – 1. miesto 50m a 100m; Valková Vivien V. A – 1. miesto 400m a 100m; Šebőková Kristína V. A – 1. a 3. miesto; 4x50 m polohové preteky – 3. miesto. Majstrovstvá kraja: Polgár Michal a Valko Sebastián – 1. miesto, postup na M SR. Atletika - Majstrovstvá okresu: viacero jednotlivcov na 1., 2., 3. miestach v rôznych disciplínach. Družstvá starších a mladších žiakov a žiačok s umiestneniami 1., 2., 3. miesto v okresnom kole.",
+    "keywords": [
+      "plávanie",
+      "atletika",
+      "majstrovstvá okresu",
+      "majstrovstvá kraja",
+      "postup na M SR",
+      "družstvo",
+      "jednotlivci",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_9",
+    "category": "Športové súťaže",
+    "title": "Orientačný beh, florbal, street-hockey, basketbal 2010/11",
+    "content": "Orientačný beh: Taricsová Dominika IX. B – 1. miesto v okresnom kole; družstvá dievčat a chlapcov – 3. miesto v okresnom kole. Florbal: Mladší žiaci - 1. miesto v okresnom kole; Starší žiaci - 1. miesto v okr. kole a 1. miesto v kraj. kole; Mladšie žiačky - 3. miesto v okresnom kole; Staršie žiačky - 1. miesto v okresnom kole, 3. miesto krajské kolo. Street-hockey (hokejbal): Družstvo starších žiakov – 1. miesto v okresnom kole, 1. miesto v krajskom kole. Basketbal: Družstvo chlapcov – 3. miesto v okresnom kole.",
+    "keywords": [
+      "orientačný beh",
+      "florbal",
+      "street-hockey",
+      "hokejbal",
+      "basketbal",
+      "okresné kolo",
+      "krajské kolo",
+      "družstvo",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_10",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2010/11",
+    "content": "Prečo mám rád slovenčinu, Slovensko: Repa Lukáš VI. A– čestné uznanie v celoslovenskej súťaži. Európa v škole: Zmarková Zoja II. A – 2. miesto v okresnom kole. Hliadka mladých zdravotníkov: Bibiana Závodská a i. – 1. miesto v okresnom kole. Poznaj svoje mesto: Kocúnová Tatiana, Budinský Jozef, Polgár Michal – 3. miesto. Hviezdoslavov Kubín: Ondrejková Tatiana IV. B – 3. miesto v okresnom kole.",
+    "keywords": [
+      "slovenčina",
+      "európa",
+      "mladí zdravotníci",
+      "poznaj svoje mesto",
+      "Hviezdoslavov Kubín",
+      "okresné kolo",
+      "celoslovenská súťaž",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_1",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2009/10",
+    "content": "Olympiáda slovenského jazyka: Ölveczká Henrieta IX. A – 3. miesto okresné kolo. Matematická olympiáda: Halmešová Petra V. A – 2. miesto v okresnom kole. Dejepisná olympiáda: Tlčina Andrej VI. A – 1. miesto v okresnom kole; Gallová Michaela VIII. B – 1. miesto v okresnom kole; Farkašová Lenka IX. C -1. miesto v okr. kole, 3. miesto v krajskom kole. Biologická olympiáda: Ondrušková Martina IX. B- 2. miesto okresné kolo, úsp. rieš. krajského kola. Geografická olympiáda: Budinský Jozef VII. A – 2. miesto okr. kolo, 5. miesto krajské kolo.",
+    "keywords": [
+      "olympiáda",
+      "slovenský jazyk",
+      "matematika",
+      "dejepis",
+      "biológia",
+      "geografia",
+      "okresné kolo",
+      "krajské kolo",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_2",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj 2009/10",
+    "content": "Družstvo dievčat – kategória A: 1. miesto Majstrovstvá Nitrianskeho kraja, 4. miesto M-SR: Bodokiová Rebecca I. A, Csutorová Gréta, Decsiová Lucia, Kaderábeková Barbora II. A, Weiss Sára III. B. Kategória B: 1. miesto Majstrovstvá Nitrianskeho kraja, 6. miesto M – SR: Zerdahelyová Monika, Aggová Karin, Solárová Dominika, Korpová Dominika V. A, Hrabovská Michaela V. B. Kategória C: 1. miesto Majstrovstvá Nitrianskeho kraja, 7. miesto M – SR: Brestovská Marcela, Hankóová Katarína VII. B, Ježová Denisa VIII. B, Galbavá Miroslava, Tóthová Jessica IX. B. Družstvo chlapcov – kategória A: 2. miesto Majstrovstvá Nitrianskeho kraja: Korpa Róbert I. A, Cvik Ján, Chovald Adam I. C, Šarfický Samuel II. A, Udvardi David III. B. Kategória B: 3. Miesto Majstrovstvá Nitrianskeho kraja: Decsi Roderik III. A, Huttner Adrián, Gelle Nikolas, Krutek Adam IV. A, Takács Martin IV. C.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "družstvo",
+      "dievčatá",
+      "chlapci",
+      "kategória A",
+      "kategória B",
+      "kategória C",
+      "Majstrovstvá Nitrianskeho kraja",
+      "M-SR",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_3",
+    "category": "Športové súťaže",
+    "title": "Plávanie a atletika 2009/10",
+    "content": "Plávanie - Majstrovstvá Nitrianskeho kraja: Polgár Michal VII. C – 2. miesto; Valko Sebastián VII. C – 2. miesto; Valková Vivien IV. C – 3. miesto. Atletika - Štafeta chlapci: 2. a 3. miesto: Polgár Michal, Valko Sebastián, Gróf Stanislav VII. C, Paulis Peter IX. A. Majstrovstvá okresu - Družstvo mladších žiačok: 2. miesto (zoznam žiačok). Družstvo mladších žiakov: 1. miesto (zoznam žiakov). Jednotlivci - viacero umiestnení v disciplínach ako štafeta, vrh guľou, hod loptičkou, skok do výšky, beh 1000m.",
+    "keywords": [
+      "plávanie",
+      "atletika",
+      "majstrovstvá kraja",
+      "majstrovstvá okresu",
+      "štafeta",
+      "jednotlivci",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_4",
+    "category": "Športové súťaže",
+    "title": "Orientačný beh, aerobik, vybíjaná, stolný tenis, florbal 2009/10",
+    "content": "Orientačný beh: Gallová Michaela VIII. B – 1. miesto v okresnom kole; Galbavá Miroslava IX. B - 1. miesto v okresnom kole družstvo, 3. miesto jednotl. Športový aerobik: Hrabovská Michaela V. B – 1. miesto MM SR; Brestovská Marcela VII. B – 5. miesto MM SR; štvorkrok (Ivolková Viktória a i.) – 2. miesto MM SR, 1. miesto SR, 1. miesto Federálny pohár. Vybíjaná: Družstvo dievčat – 2. miesto okresné kolo. Stolný tenis: Farkašová Lenka IX. C – 2. miesto; Taricsová Dominika VIII. B – 2. miesto; Karvašová Barbora IX. B – 3. miesto (všetky okresné kolo). Florbal: Mladší žiaci - 1. miesto okres, 3. miesto kraj; Starší žiaci - 1. miesto okres, 2. miesto kraj; Mladšie žiačky - 2. miesto okres; Staršie žiačky - 2. miesto okres.",
+    "keywords": [
+      "orientačný beh",
+      "športový aerobik",
+      "vybíjaná",
+      "stolný tenis",
+      "florbal",
+      "okresné kolo",
+      "krajské kolo",
+      "MM SR",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_5",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2009/10",
+    "content": "Prečo mám rád slovenčinu, Slovensko: Zmarková Zoja I. A– čestné uznanie celosl. súťaž. Európa v škole: Bohoš Patrik II. A – ocenená práca v okresnom kole; Sallaiová Veronika VI. A – ocenená práca v okresnom kole. Hliadka mladých zdravotníkov: 2. miesto v okresnom kole (Závodská Bibiana a i.). Život a dielo A. Bernoláka: Laczová Kristína, Hankóová Katarína, Kmeťová Mária VII. B – 1. miesto. Vesmír očami detí: Šimunek Marek – 3. miesto v okresnom kole súťaže.",
+    "keywords": [
+      "slovenčina",
+      "európa",
+      "mladí zdravotníci",
+      "Bernolák",
+      "vesmír",
+      "okresné kolo",
+      "celoslovenská súťaž",
+      "2009/10"
+    ]
+  },
+  {
+    "id": "uspechy_6",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2010/11",
+    "content": "Dejepisná olympiáda: Sucharda Adam VI.B – 3. miesto v okresnom kole; Virág Ladislav VI. B – 2. miesto v okresnom kole; Budinský Jozef VIII. A – 3. miesto v okresnom kole; Kocúnová Tatiana VIII. A - 2. miesto v okresnom kole, úsp. v krajskom kole. Geografická olympiáda: Budinský Jozef VIII. A – 3. miesto v okresnom kole. Olympiáda anglického jazyka: Gajdošík Richard VII. A – 3. miesto v okresnom kole.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "geografia",
+      "anglický jazyk",
+      "okresné kolo",
+      "krajské kolo",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_7",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj a športový aerobik 2010/11",
+    "content": "Gymnastický štvorboj: Csutorová Gréta III. A – 3. miesto M-SR, kategória A. Družstvá dievčat kategórie A, B, C s umiestneniami na Majstrovstvách Nitrianskeho kraja a M-SR. Družstvá chlapcov kategórie A, B s umiestneniami na Majstrovstvách Nitrianskeho kraja a M-SR. Športový aerobik: Slovak aerobik open – MM SR: Marázová Rebeca V.B – 4. miesto; Brestovská Marcela VIII.B – 5. miesto; Hrabovská Michaela VI.B – 1. miesto mix pár; štvorkrok (Brestovská Marcela a i.) – 1. miesto step junior.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "športový aerobik",
+      "MM SR",
+      "družstvo",
+      "kategória",
+      "Majstrovstvá Nitrianskeho kraja",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_8",
+    "category": "Športové súťaže",
+    "title": "Plávanie a atletika 2010/11",
+    "content": "Plávanie - Majstrovstvá okresu: Polgár Michal VIII. C – 1. miesto 100m a 400m; Valko Sebastián VIII. C – 1. miesto 50m a 100m; Valková Vivien V. A – 1. miesto 400m a 100m; Šebőková Kristína V. A – 1. a 3. miesto; 4x50 m polohové preteky – 3. miesto. Majstrovstvá kraja: Polgár Michal a Valko Sebastián – 1. miesto, postup na M SR. Atletika - Majstrovstvá okresu: viacero jednotlivcov na 1., 2., 3. miestach v rôznych disciplínach. Družstvá starších a mladších žiakov a žiačok s umiestneniami 1., 2., 3. miesto v okresnom kole.",
+    "keywords": [
+      "plávanie",
+      "atletika",
+      "majstrovstvá okresu",
+      "majstrovstvá kraja",
+      "postup na M SR",
+      "družstvo",
+      "jednotlivci",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_9",
+    "category": "Športové súťaže",
+    "title": "Orientačný beh, florbal, street-hockey, basketbal 2010/11",
+    "content": "Orientačný beh: Taricsová Dominika IX. B – 1. miesto v okresnom kole; družstvá dievčat a chlapcov – 3. miesto v okresnom kole. Florbal: Mladší žiaci - 1. miesto v okresnom kole; Starší žiaci - 1. miesto v okr. kole a 1. miesto v kraj. kole; Mladšie žiačky - 3. miesto v okresnom kole; Staršie žiačky - 1. miesto v okresnom kole, 3. miesto krajské kolo. Street-hockey (hokejbal): Družstvo starších žiakov – 1. miesto v okresnom kole, 1. miesto v krajskom kole. Basketbal: Družstvo chlapcov – 3. miesto v okresnom kole.",
+    "keywords": [
+      "orientačný beh",
+      "florbal",
+      "street-hockey",
+      "hokejbal",
+      "basketbal",
+      "okresné kolo",
+      "krajské kolo",
+      "družstvo",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_10",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2010/11",
+    "content": "Prečo mám rád slovenčinu, Slovensko: Repa Lukáš VI. A– čestné uznanie v celoslovenskej súťaži. Európa v škole: Zmarková Zoja II. A – 2. miesto v okresnom kole. Hliadka mladých zdravotníkov: Bibiana Závodská a i. – 1. miesto v okresnom kole. Poznaj svoje mesto: Kocúnová Tatiana, Budinský Jozef, Polgár Michal – 3. miesto. Hviezdoslavov Kubín: Ondrejková Tatiana IV. B – 3. miesto v okresnom kole.",
+    "keywords": [
+      "slovenčina",
+      "európa",
+      "mladí zdravotníci",
+      "poznaj svoje mesto",
+      "Hviezdoslavov Kubín",
+      "okresné kolo",
+      "celoslovenská súťaž",
+      "2010/11"
+    ]
+  },
+  {
+    "id": "uspechy_16",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2012/13",
+    "content": "Dejepisná olympiáda: Závodská Bibiana VII.A – 2. miesto v okresnom kole, 4. miesto v krajskom kole; Kamenická Stela VII.A – 3. miesto v okresnom kole; Frederik Döme VIII. A – 3. miesto v okresnom kole. Geografická olympiáda: Moravčík Martin V. A – 3. miesto v okresnom kole. Biologická olympiáda: Zambó Adrián VIII. A – 1. miesto v okresnom kole kategórie C; Pallek Martin VII. A – 2. miesto v okresnom kole kategórie E. Matematická olympiáda: Takács Martin VII. A – 1. miesto v okresnom kole. Fyzikálna olympiáda: Borbély Boris IX. A – 3. miesto v okresnom kole.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "geografia",
+      "biológia",
+      "matematika",
+      "fyzika",
+      "okresné kolo",
+      "krajské kolo",
+      "2012/13"
+    ]
+  },
+  {
+    "id": "uspechy_17",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj a tímové športy 2012/13",
+    "content": "Gymnastický štvorboj: Družstvo dievčat – kategória A: 2. miesto Majstrovstvá Nitrianskeho kraja, 1. miesto v okresnom kole. Kategória B: 1. miesto Majstrovstvá Nitrianskeho kraja, 1. miesto v okresnom kole, 7. miesto na M-SR. Kategória chlapcov B: 2. miesto Majstrovstvá Nitrianskeho kraja, 1. miesto v okresnom kole. Florbal: Družstvo mladších žiakov - 1.miesto v okresnom kole, 2. miesto v krajskom kole. Družstvo starších žiakov – 2. miesto v okresnom kole. Družstvo starších žiačok – 3. miesto v okresnom kole. Hokejbal: Družstvo starších žiakov – 1.miesto v okresnom kole. Vybíjaná: Družstvo dievčat – 2. miesto v okresnom kole.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "florbal",
+      "hokejbal",
+      "vybíjaná",
+      "družstvo",
+      "okresné kolo",
+      "krajské kolo",
+      "Majstrovstvá Nitrianskeho kraja",
+      "M-SR",
+      "2012/13"
+    ]
+  },
+  {
+    "id": "uspechy_18",
+    "category": "Športové súťaže",
+    "title": "Cezpoľný beh, orientačný beh a atletika 2012/13",
+    "content": "Cezpoľný beh: Družstvo žiačok – 2. miesto v okresnom kole (Bišťanová Michaela, Valková Vivien, Bieliková Paulína). Orientačný beh: Sellár Mário IX. B – 1. miesto v okresnom kole, 5. miesto v krajskom kole. Družstvo chlapcov – 3. miesto v okresnom kole. Družstvo dievčat – 3. miesto v okresnom kole. Atletika - Starší žiaci: Družstvo starších žiačok – 2. miesto v okresnom kole. Štafeta dievčat – 2. miesto v okresnom kole. Družstvo starších žiakov – 2. miesto v okresnom kole. Štafeta chlapcov – 1.miesto v okresnom kole. Jednotlivci: Bišťanová Michaela, Štrasáková Silvia, Sellár Mário, Kučera Ján, Pavlatovský Marcel – umiestnenia v behu, skoku, hode guľou/kriketkou na okresnom a krajskom kole. Mladší žiaci: Družstvo mladších žiačok – 1. miesto v okresnom kole. Družstvo mladších žiakov – 3. miesto v okresnom kole.",
+    "keywords": [
+      "cezpoľný beh",
+      "orientačný beh",
+      "atletika",
+      "starší žiaci",
+      "mladší žiaci",
+      "okresné kolo",
+      "krajské kolo",
+      "družstvo",
+      "štafeta",
+      "jednotlivci",
+      "2012/13"
+    ]
+  },
+  {
+    "id": "uspechy_19",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2012/13",
+    "content": "Pytagoriáda: Moravčík Martin V. A – 1. miesto v okresnom kole; Kotasová Viktória IV. C – 2. miesto v okresnom kole; Takács Martin VII. A – 1. miesto v okresnom kole. Súťaž o Antonovi Bernolákovi: 2. miesto (Kamenická Stella, Kečkéšová Antónia, Pallek Martin VII. A). Hviezdoslavov Kubín: Viszkocsil Roman IX. C – 1. miesto v spádovom kole, 2. miesto v okresnom kole. Výtvarná súťaž - Celoslovenská súťaž RVSZZ: Jana Nováková IV. A, Laura Poročáková V. B.",
+    "keywords": [
+      "pytagoriáda",
+      "Anton Bernolák",
+      "Hviezdoslavov Kubín",
+      "výtvarná súťaž",
+      "RVSZZ",
+      "okresné kolo",
+      "spádové kolo",
+      "celoslovenská súťaž",
+      "2012/13"
+    ]
+  },
+  {
+    "id": "uspechy_20",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2013/14",
+    "content": "Dejepisná olympiáda: Monika Pálová VI. A - 2. miesto; Michal Sulan VI. A - 3. miesto; Ladislav Virág IX. A - 1. miesto v okresnom kole, 6. miesto v krajskom kole; Bibiana Závodská VIII. A – 2. miesto v okresnom kole, 6. miesto v krajskom kole; Martin Pallek VIII. A – 3. miesto; Frederik Döme IX. A – 3. miesto (všetky okresné kolo). Biologická olympiáda: Stella Katarína Kamenická VIII. A – 1. miesto kategória C; Pallek Martin VIII. A – 3. miesto kategória E - botanika; Monika Pálová VI. A – 3. miesto kategória E - zoológia. Matematická olympiáda: Viktória Kotaszová V. B – 2. miesto. Fyzikálna olympiáda: Martin Pallek VIII. A – 1. miesto; Bibiana Závodská VIII. A – 1. miesto; Martin Takács VIII. A – 3. miesto.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "biológia",
+      "matematika",
+      "fyzika",
+      "okresné kolo",
+      "krajské kolo",
+      "2013/14"
+    ]
+  },
+  {
+    "id": "uspechy_21",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj a ostatné športy 2013/14",
+    "content": "Gymnastický štvorboj: Družstvo dievčat – kategória A: 2. miesto v krajskom kole, 1. miesto v okresnom kole. Kategória B: 3. miesto v krajskom kole, 1. miesto v okresnom kole. Kategória C: 1. miesto v krajskom kole, 1. miesto v okresnom kole. Družstvo chlapcov – kategória A: 2. miesto v krajskom kole, 1. miesto v okresnom kole. Kategória C: 3. miesto v krajskom kole, 1. miesto v okresnom kole. Vybíjaná: Družstvo dievčat – 3. miesto v okresnom kole. Cezpoľný beh: Vivien Valková VIII. A – 1. miesto v okresnom kole; Družstvo žiačok – 1. miesto v okresnom kole.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "vybíjaná",
+      "cezpoľný beh",
+      "družstvo",
+      "krajské kolo",
+      "okresné kolo",
+      "2013/14"
+    ]
+  },
+  {
+    "id": "uspechy_22",
+    "category": "Športové súťaže",
+    "title": "Atletika a ostatné súťaže 2013/14",
+    "content": "Atletika - Starší žiaci: Silvia Štrasáková – 2. miesto hod kriketkou; Michaela Hrabovská – 3. miesto beh 60m; Štefan Hruboň – 1. miesto hod guľou; Markus Bórik – 1. miesto beh 1000m (všetky okresné kolo). Družstvo starších žiačok – 3. miesto v okresnom kole. Mladší žiaci: Patrícia Sulčanová – 2. miesto beh 60m; Tereza Burietová – 2. miesto hod kriketkou; Štafeta 4x60 m – umiestnenie (všetky okresné kolo). Ostatné súťaže: Pytagoriáda: Takács Martin VIII. A – 1. miesto. Súťaž o Antonovi Bernolákovi: 2. miesto. Poznaj svoje mesto: 1. miesto. Európa v škole: Jakub Šebík – 2. miesto; Karin Aggová – 3. miesto. Výtvarná súťaž RVSZZ: Natália Nagyová, Nina Gašparíková.",
+    "keywords": [
+      "atletika",
+      "pytagoriáda",
+      "Anton Bernolák",
+      "poznaj svoje mesto",
+      "európa v škole",
+      "výtvarná súťaž",
+      "okresné kolo",
+      "2013/14"
+    ]
+  },
+  {
+    "id": "uspechy_23",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2014/15",
+    "content": "Dejepisná olympiáda: Monika Pálová VII. A - 1. miesto v okresnom kole, 3. miesto v krajskom kole; Martin Pallek IX. A – 1. miesto v okresnom kole, 2. miesto v krajskom kole; Nina Gašparíková VI. A – 2. miesto v okresnom kole; Bibiána Závodská IX. A – 2. miesto v okresnom kole, úspešný riešiteľ krajského kola. Biologická olympiáda: Roderik Decsi VIII. A – 3. miesto kategória E; Michaela Bartová VIII. A – 5. miesto kategória E. Matematická olympiáda: Martin Pallek IX. A – 3. miesto; Bibiána Závodská IX. A – 3. miesto; Nina Gašparíková VI. A – 6. miesto. Fyzikálna olympiáda: Martin Takács IX. A – 5. miesto, úspešný riešiteľ krajského kola; Bibiana Závodská IX. A – 7. miesto, úspešný riešiteľ krajského kola.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "biológia",
+      "matematika",
+      "fyzika",
+      "okresné kolo",
+      "krajské kolo",
+      "úspešný riešiteľ",
+      "2014/15"
+    ]
+  },
+  {
+    "id": "uspechy_24",
+    "category": "Športové súťaže",
+    "title": "Športové súťaže 2014/15",
+    "content": "Gymnastický štvorboj: Družstvo dievčat – kategória A: 1. miesto v krajskom kole, 1. miesto v okresnom kole. Kategória C: 1. miesto v krajskom kole, 1. miesto v okresnom kole. Družstvo chlapcov – kategória A: 1. miesto v krajskom kole, 1. miesto v okresnom kole. Kategória B: 3. miesto v krajskom kole, 1. miesto v okresnom kole. Kategória C: 2. miesto v krajskom kole, 1. miesto v okresnom kole. Volejbal: Družstvo dievčat – 2. miesto v okresnom kole. Atletika: Urban Žiga – 1. miesto v skoku do výšky; Družstvo dievčat – 1. miesto v okresnom kole. Športový aerobik: Patrik Šarkőzi – 1. miesto M-SR Slovak Aerobic Open; Alexandra Uhnáková, Natália Horská - 3. miesto M-SR.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "volejbal",
+      "atletika",
+      "športový aerobik",
+      "Slovak Aerobic Open",
+      "M-SR",
+      "krajské kolo",
+      "okresné kolo",
+      "družstvo",
+      "2014/15"
+    ]
+  },
+  {
+    "id": "uspechy_25",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2014/15",
+    "content": "Súťaž o Antonovi Bernolákovi: 3. miesto (Monika Pálová, Michal Sulan, Adam Pallek). Poznaj svoje mesto: 2. miesto (Krisztián Agh, Roderik Decsi, Patrícia Sulčanová). Družstvá mladých zdravotníkov: 1. miesto v okresnom kole (Stella Katarína Kamenická, Martin Pallek, Karin Slamenková, Martin Takács, Bibiána Závodská).",
+    "keywords": [
+      "Anton Bernolák",
+      "poznaj svoje mesto",
+      "mladí zdravotníci",
+      "okresná súťaž",
+      "2014/15"
+    ]
+  },
+  {
+    "id": "uspechy_26",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2015/16",
+    "content": "Dejepisná olympiáda: Monika Pálová VIII. A - 1. miesto v okresnom kole, 3. miesto v krajskom kole; Nina Gašparíková VII. A – 2. miesto v okresnom kole, úspešný riešiteľ krajského kola. Biologická olympiáda: Roderik Decsi IX. A – 2. miesto v okresnom kole, úspešný riešiteľ krajského kola; Kristof Kappel VIII. B – 2. miesto v okresnom kole; Adrián Žáčik VIII. A - 3. miesto v okresnom kole. Matematická olympiáda: Roderik Decsi IX. A – 4. miesto v okresnom kole; Martin Ozorák V. B - 4. miesto v okresnom kole.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "biológia",
+      "matematika",
+      "okresné kolo",
+      "krajské kolo",
+      "úspešný riešiteľ",
+      "2015/16"
+    ]
+  },
+  {
+    "id": "uspechy_27",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj 2015/16",
+    "content": "Družstvo dievčat – kategória B: 2. miesto v okresnom kole (Laura Farkas, Kristína Taricsová, Lilian Slivoňová, Ema Királyová IV. B, Vivien Mandelíková IV.A). Kategória C: 1. miesto v okresnom kole, 1. miesto v krajskom kole, 7. miesto na M-SR (Rebecca Bodokiová, Nina Gašparíková VII. A, Alexandra Uhnáková, Natália Horská VII. B, Barbora Kaderábeková VIII.A). Družstvo chlapcov – kategória A: 1. miesto v okresnom kole. Kategória B: 1. miesto v okresnom kole, 3. miesto v krajskom kole. Kategória C: 1. miesto v okresnom kole, 2. miesto v krajskom kole.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "družstvo",
+      "dievčatá",
+      "chlapci",
+      "okresné kolo",
+      "krajské kolo",
+      "M-SR",
+      "2015/16"
+    ]
+  },
+  {
+    "id": "uspechy_28",
+    "category": "Športové súťaže",
+    "title": "Oxdogflorbal cup a florbal 2015/16",
+    "content": "Oxdogflorbal cup: Družstvo dievčat – 1. miesto v okresnom kole (Patrícia Sulčanova IX. A, Dominika Kurucová IX. B, Tamara Tlčinová VIII. A, Laura Poročáková, Cynthia Placha, Simona Plavnická VIII. B, Rebeca Bodokiová, Pálová Kimberly VII.A). Florbal: Družstvo chlapcov – 2. miesto v okresnom kole (zloženie žiakov z 7. – 9. ročníka).",
+    "keywords": [
+      "oxdogflorbal cup",
+      "florbal",
+      "družstvo",
+      "dievčatá",
+      "chlapci",
+      "okresné kolo",
+      "2015/16"
+    ]
+  },
+  {
+    "id": "uspechy_29",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2015/16",
+    "content": "Pytagoriáda: Nina Gašparíková VII. A - 3. miesto v okresnom kole; Martin Ozorák V. B - 7. miesto v okresnom kole. Anton Bernolák - život a dielo: 1. miesto (Jana Nováková, Zoja Zmarková, Nina Gašparíková VII. A). Poznaj svoje mesto: 3. miesto (Monika Pálová, Michal Sulan VIII. A, Sabína Žiláková VIII. B). Slávik Slovenska: Patrik Balogh V. A - 1. miesto v okresnom kole.",
+    "keywords": [
+      "pytagoriáda",
+      "Anton Bernolák",
+      "poznaj svoje mesto",
+      "slávik slovenska",
+      "okresné kolo",
+      "2015/16"
+    ]
+  },
+  {
+    "id": "uspechy_30",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2016/17",
+    "content": "Olympiáda v nemeckom jazyku: Adam Matkovics VIII. B – 1. miesto v okresnom kole, 1. miesto v krajskom kole, úspešný riešiteľ celoštátneho kola. Dejepisná olympiáda: Monika Pálová IX. A - 1. miesto v okresnom kole, 2. miesto v krajskom kole; Nina Gašparíková VIII. A – 2. miesto v okresnom kole, úspešná riešiteľka krajského kola; Jana Nováková VIII. A – 3. miesto; Sebastián Moravčík VII. A - 3. miesto; ďalší úspešní riešitelia. Biologická olympiáda: Nina Gašparíková VIII. A – 1. miesto v okresnom kole kat. E, úspešná riešiteľka krajského kola; ďalší úspešní riešitelia. Matematická olympiáda: úspešní riešitelia okresného kola. Olympiáda zo slovenského jazyka: Monika Pálová - úspešný riešiteľ okresného kola.",
+    "keywords": [
+      "olympiáda",
+      "nemecký jazyk",
+      "dejepis",
+      "biológia",
+      "matematika",
+      "slovenský jazyk",
+      "okresné kolo",
+      "krajské kolo",
+      "celoštátne kolo",
+      "úspešný riešiteľ",
+      "2016/17"
+    ]
+  },
+  {
+    "id": "uspechy_31",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj a atletika 2016/17",
+    "content": "Gymnastický štvorboj: Družstvo dievčat – kategória A: 1. miesto v okresnom kole, 1. miesto v krajskom kole, 8. miesto M-SR. Kategória B: 2. miesto v okresnom kole. Kategória C: 1. miesto v okresnom kole, 1. miesto v krajskom kole. Družstvo chlapcov – kategória A: 1. miesto v okresnom kole, 3. miesto v krajskom kole. Kategória B: 2. miesto v okresnom kole. Kategória C: 1. miesto v okresnom kole, 3. miesto v krajskom kole. Atletika: Štafeta 4x60 m staršie žiačky – 3. miesto v okresnom kole. Skok do výšky starší žiaci – 3. miesto v okresnom kole (Romuald Dráfi).",
+    "keywords": [
+      "gymnastický štvorboj",
+      "atletika",
+      "družstvo",
+      "okresné kolo",
+      "krajské kolo",
+      "M-SR",
+      "štafeta",
+      "2016/17"
+    ]
+  },
+  {
+    "id": "uspechy_32",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2016/17",
+    "content": "Pytagoriáda: Karina Yatschovych, Martin Ozorák – úspešní riešitelia. Súťaž o Antonovi Bernolákovi: 1. miesto (Sebastián Moravčík, Kristína Dráfiová, Viktor Muči). Hviezdoslavov Kubín: Monika Pálová - 2. miesto v obvodnom kole. Olympiáda v anglickom jazyku 1. – 4. roč.: 2. a 3. miesta v mestskom kole. Expert geniality show: Alexander Csermák, Monika Pálová – Top expert. Ochranárik čisla tiesňového volania 112 a CO: Monika Pálová – 1. miesto v okresnom kole, najlepšia práca.",
+    "keywords": [
+      "pytagoriáda",
+      "Anton Bernolák",
+      "Hviezdoslavov Kubín",
+      "anglický jazyk",
+      "expert geniality",
+      "tiesňové volanie 112",
+      "obvodné kolo",
+      "mestská súťaž",
+      "okresné kolo",
+      "2016/17"
+    ]
+  },
+  {
+    "id": "uspechy_33",
+    "category": "Ostatné súťaže",
+    "title": "Detská Novozámocká olympiáda 2016/17",
+    "content": "Družstvo dievčat 1. kategória – 1. miesto. Družstvo chlapcov 1. kategória – 3. miesto. Družstvo dievčat 2. kategória – 1. miesto. Družstvo chlapcov 2. kategória – 3. miesto. Družstvo dievčat 3. kategória – 2.miesto. Súťaž pre žiakov 1. - 5. ročníka v rôznych kategóriách.",
+    "keywords": [
+      "Detská Novozámocká olympiáda",
+      "družstvo",
+      "1. kategória",
+      "2. kategória",
+      "3. kategória",
+      "2016/17"
+    ]
+  },
+  {
+    "id": "uspechy_34",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2017/18",
+    "content": "Olympiáda v nemeckom jazyku: Adam Matkovics IX. B – 2. miesto v okresnom kole, 5. miesto v krajskom kole. Olympiáda v anglickom jazyku: Jana Nováková IX. A – 2. miesto v okresnom kole. Dejepisná olympiáda: Jana Nováková IX. A – 3. miesto v okresnom kole; Kristína Taricsová VI. B - 3. miesto v okresnom kole. Biologická olympiáda: Alexandra Uhnáková IX. B – 3. miesto v okresnom kole.",
+    "keywords": [
+      "olympiáda",
+      "nemecký jazyk",
+      "anglický jazyk",
+      "dejepis",
+      "biológia",
+      "okresné kolo",
+      "krajské kolo",
+      "2017/18"
+    ]
+  },
+  {
+    "id": "uspechy_35",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj a športy 2017/18",
+    "content": "Gymnastický štvorboj: Družstvo dievčat – kategória A: 1. miesto v okresnom kole, 1. miesto v krajskom kole, 8. miesto M-SR. Kategória B: 2. miesto v okresnom kole. Kategória C: 1. miesto v okresnom kole, 1. miesto v krajskom kole, 7. Miesto M-SR. Družstvo chlapcov – kategória B: 1. miesto v okresnom kole, 5. miesto v krajskom kole. Kategória C: 1. miesto v okresnom kole, 3. miesto v krajskom kole. Atletika: Roland Fábián – 2. miesto hod kriketkou; Natália Horská – 2. miesto, Ella Štefániková – 3. miesto skok do výšky (všetky okresné kolo). Volejbal: Družstvo dievčat – 3. miesto v okresnom kole.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "atletika",
+      "volejbal",
+      "družstvo",
+      "okresné kolo",
+      "krajské kolo",
+      "M-SR",
+      "2017/18"
+    ]
+  },
+  {
+    "id": "uspechy_36",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2017/18",
+    "content": "Poznaj svoje mesto: 1. miesto (Kristína Dráfiová, Viktor Muči, Sebastián Moravčík). Život a dielo Antona Bernoláka: 2. miesto (Vanessa Kvasnovská, Samuel Tomaštík, Martin Ozorák). Jazykový kvet: Krajské finále – 2. miesto (družstvo); Adam Matkovics – 1. miesto krajské finále, 2. miesto celoslovenské kolo; Vanda Teplanová – 3. miesto krajské finále. Prečo mám rád slovenčinu: Miroslav Bogár – ocenenie primátorom. Slávik Slovenska: Flóra Rablánska – 3. miesto v okresnom kole. Olympiáda v anglickom jazyku 1. – 4. roč.: 2. a 3. miesta v mestskej súťaži. Maksík: Vanda Teplanová – titul najmúdrejší Maksáčik.",
+    "keywords": [
+      "poznaj svoje mesto",
+      "Anton Bernolák",
+      "jazykový kvet",
+      "slovenčina",
+      "slávik slovenska",
+      "anglický jazyk",
+      "Maksík",
+      "okresné kolo",
+      "krajské finále",
+      "celoslovenské kolo",
+      "mestská súťaž",
+      "2017/18"
+    ]
+  },
+  {
+    "id": "uspechy_37",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2018/19",
+    "content": "Dejepisná olympiáda: Patrik Slovák VII. B – 3. miesto v okresnom kole; Juraj Pálenkáš IX. A - 3. miesto v okresnom kole. Matematická olympiáda: Karina Yatschovich VII. B – 1. miesto v okresnom kole. Technická olympiáda: Dominik Kaderábek VII. B – 1. miesto v okresnom kole, úspešný riešiteľ krajského kola.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "matematika",
+      "technická olympiáda",
+      "okresné kolo",
+      "krajské kolo",
+      "úspešný riešiteľ",
+      "2018/19"
+    ]
+  },
+  {
+    "id": "uspechy_38",
+    "category": "Športové súťaže",
+    "title": "Športové súťaže 2018/19",
+    "content": "Streľba zo vzduchovej pušky: Chanel Ema Beňová VII. A – 3. miesto v krajskom kole. Gymnastický štvorboj: Družstvo dievčat – kategória A: 2. miesto v okresnom kole; kategória B: 3. miesto v okresnom kole; kategória C: 2. miesto v okresnom kole. Družstvo chlapcov – kategória A: 2. miesto v okresnom kole; kategória B: 1. miesto v okresnom kole, 3. miesto v krajskom kole; kategória C: 2. miesto v okresnom kole. Beh olympijského dňa: Viacerí žiaci na 1., 2., 3. miestach v rôznych kategóriách.",
+    "keywords": [
+      "streľba",
+      "vzduchová puška",
+      "gymnastický štvorboj",
+      "beh olympijského dňa",
+      "družstvo",
+      "okresné kolo",
+      "krajské kolo",
+      "2018/19"
+    ]
+  },
+  {
+    "id": "uspechy_39",
+    "category": "Ostatné súťaže",
+    "title": "Detská novozámocká olympiáda 2018/19",
+    "content": "Družstvo chlapcov – 1. miesto. Družstvo dievčat – 3. miesto. Jednotlivci: Tobias Filo II. A – 1. miesto v skoku do diaľky, beh 60m a 500m. Alex Péter II. A – 2. miesto v behu na 500 m. Jakub Ryška I. C – 3. miesto v behu na 500 m. Súťaž pre mladších žiakov.",
+    "keywords": [
+      "Detská novozámocká olympiáda",
+      "družstvo",
+      "jednotlivci",
+      "beh",
+      "skok do diaľky",
+      "2018/19"
+    ]
+  },
+  {
+    "id": "uspechy_40",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2018/19",
+    "content": "Poznaj svoje mesto: 1. miesto (Vanessa Kvasnovská, Samuel Tomaštík, Martin Ozorák). Život a dielo Antona Bernoláka: 2. miesto (Patrik Slovák, Kristína Taricsová, Vanesa Tabiová). Olympiáda v anglickom jazyku 1. – 4. roč.: Christian Rudolf Hindi, Flóra Rablánská – 3. miesta v mestskej súťaži. Družstvo mladých záchranárov: 3. miesto v územnom kole súťaže.",
+    "keywords": [
+      "poznaj svoje mesto",
+      "Anton Bernolák",
+      "anglický jazyk",
+      "mladí záchranári",
+      "mestská súťaž",
+      "územné kolo",
+      "2018/19"
+    ]
+  },
+  {
+    "id": "uspechy_41",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2019/20",
+    "content": "Dejepisná olympiáda: Tomáš Goga VI. A – 3. miesto v okresnom kole. Technická olympiáda: Marek Botka, Alexander Mile IX. A – 1. miesto v okresnom kole – kategória A.",
+    "keywords": [
+      "olympiáda",
+      "dejepis",
+      "technická olympiáda",
+      "okresné kolo",
+      "2019/20"
+    ]
+  },
+  {
+    "id": "uspechy_42",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2019/20",
+    "content": "Život a dielo Antona Bernoláka: 2. miesto (Vivien Krampotyáková, Chiara Šalgová, Emma Tóthová). Mladý remeselník – okresné kolo: Zoltán Hegedűs – 1. miesto stolár; Patrik Slovák – 1. miesto elektromechanik; Vanesa Tabiová – 2. miesto stolár; Emanuel Riška – 2. miesto inštalatér. Jazykový kvet: Vanda Teplanová – 1. miesto krajské kolo, 4. miesto celoslovenské finále; Andrej Csutora – 2. miesto krajské kolo; žiaci IV.A – 3. miesto krajské kolo (divadelná hra). Výtvarná súťaž „Ochranárik tiesňového volania“: Lea Hajdáková – 2. miesto; Sára Husseinová – 3. miesto (okresná súťaž).",
+    "keywords": [
+      "Anton Bernolák",
+      "mladý remeselník",
+      "jazykový kvet",
+      "tiesňové volanie",
+      "výtvarná súťaž",
+      "okresné kolo",
+      "krajské kolo",
+      "celoslovenské finále",
+      "2019/20"
+    ]
+  },
+  {
+    "id": "uspechy_43",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2021/22",
+    "content": "Matematická olympiáda: Martin Baláž V. B – 1. miesto v okresnom kole; Natália Hercová, Samuel Surovec – úspešní riešitelia okresného kola. Olympiáda v ANJ: Monika Humličková IX. A - úspešný riešiteľ okresného kola. Dejepisná olympiáda: Natália Zsigóová, Richard Rotter, Lea Hajdáková, Sára Husseinová, Alexandra Vargová, Vivien Farkašová - úspešní riešitelia okresného kola. Geografická olympiáda: Zoja Hajdáková, Martin Baláž - úspešní riešitelia okresného kola.",
+    "keywords": [
+      "olympiáda",
+      "matematika",
+      "anglický jazyk",
+      "dejepis",
+      "geografia",
+      "okresné kolo",
+      "úspešný riešiteľ",
+      "2021/22"
+    ]
+  },
+  {
+    "id": "uspechy_44",
+    "category": "Ostatné súťaže",
+    "title": "Pytagoriáda 2021/22",
+    "content": "Úspešní riešitelia okresného kola: Oliver Kertész, Veronika Mitáková, Jazmin Holla, Marek Bulafčík, Laura Korpášová, Nadja Stjepanovičová, Nicolas Varga, Dávid Boroš, Vanessa Penzešová, Teodor Szeghö, Viliam Varga, Benjamín Vöros, Michaela Černáková, Nela Kmeťová, Tomáš Dráfi (žiaci 3. a 4. ročníka).",
+    "keywords": [
+      "pytagoriáda",
+      "úspešný riešiteľ",
+      "okresné kolo",
+      "2021/22"
+    ]
+  },
+  {
+    "id": "uspechy_45",
+    "category": "Ostatné súťaže",
+    "title": "Ostatné súťaže 2021/22",
+    "content": "Hviezdoslavov Kubín: Benjamín Vöros III. A – 2. miesto okres, 3. miesto kraj; Ela Csüriová II. B – 1. miesto okres. Šaliansky Maťko: Benjamín Vöros III. A – 3. miesto v okresnom kole. Slávik Slovenska: Nela Kmeťová III. B – 1. miesto okres, 2. miesto kraj. Olympiáda ANJ pre 1. stupeň: Jazmin Holla – 1. miesto; Samuel Rajniak III. A – 1. miesto; Dávid Boroš III. A – 2. miesto (všetky mestská súťaž).",
+    "keywords": [
+      "Hviezdoslavov Kubín",
+      "Šaliansky Maťko",
+      "Slávik Slovenska",
+      "anglický jazyk",
+      "okresné kolo",
+      "krajské kolo",
+      "mestská súťaž",
+      "2021/22"
+    ]
+  },
+  {
+    "id": "uspechy_46",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2022/23",
+    "content": "Matematická olympiáda - okresné kolo – úspešní riešitelia: Tomáš Paulovič V. B, Nadja Stjepanovičová V. B. Dejepisná olympiáda - okresné kolo – úspešní riešitelia: Richard Rotter IX. A, Adrián Barek IX. A, Sára Husseinová VIII. A, Lea Hajdáková VIII. A, Alexandra Vargová VII. A, Samuel Farkaš VI. C. Olympiáda zo SJL (slovenského jazyka a literatúry) - okresné kolo – úspešný riešiteľ: Petronela Tadanaiová IX. A. Olympiáda z ANJ (anglického jazyka) - okresné kolo – úspešný riešiteľ: Litavský Patrik IX. A.",
+    "keywords": [
+      "olympiáda",
+      "matematika",
+      "dejepis",
+      "slovenský jazyk",
+      "anglický jazyk",
+      "okresné kolo",
+      "úspešný riešiteľ",
+      "2022/23"
+    ]
+  },
+  {
+    "id": "uspechy_47",
+    "category": "Športové súťaže",
+    "title": "Gymnastický štvorboj 2022/23",
+    "content": "Družstvo dievčat: 1. miesto v okresnom kole, 2. miesto v krajskom kole. Zloženie: Ivana Komloši IV. B, Vanessa Penzešová IV. A, Tatiana Hrabovszká III. A, Sofia Krišková II. A, Karin Jajcaj II. A.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "družstvo dievčat",
+      "okresné kolo",
+      "krajské kolo",
+      "2022/23"
+    ]
+  },
+  {
+    "id": "uspechy_48",
+    "category": "Ostatné súťaže",
+    "title": "Digitálna škola budúcnosti a Pytagoriáda 2022/23",
+    "content": "Digitálna škola budúcnosti: Veronika Galóová IX. A, Norbert Mojzes IX. A – 2. miesto v celoslovenskej súťaži. Pytagoriáda - okresné kolo – úspešní riešitelia: Oliver Kertész V. A, Daniš Miloslav III. D.",
+    "keywords": [
+      "digitálna škola budúcnosti",
+      "pytagoriáda",
+      "celoslovenská súťaž",
+      "okresné kolo",
+      "úspešný riešiteľ",
+      "2022/23"
+    ]
+  },
+  {
+    "id": "uspechy_49",
+    "category": "Ostatné súťaže",
+    "title": "Recitačné a jazykové súťaže 2022/23",
+    "content": "Hviezdoslavov Kubín: Ela Csüriová III. B – 2. miesto okres; Benjamín Vöros IV. A – 3. miesto okres; Markéta Koišová IV. A – 2. miesto obvod; Saša Szantóová V. A – 3. miesto obvod. Šaliansky Maťko: Benjamín Vöros IV. A – 2. miesto v okresnom kole. Olympiáda ANJ pre 1. stupeň: Samuel Rajniak IV. A – 1. miesto; Dávid Boroš, Benjamín Vöros – 3. miesta (všetky mestská súťaž).",
+    "keywords": [
+      "Hviezdoslavov Kubín",
+      "Šaliansky Maťko",
+      "anglický jazyk",
+      "recitácia",
+      "okresné kolo",
+      "obvodné kolo",
+      "mestská súťaž",
+      "2022/23"
+    ]
+  },
+  {
+    "id": "uspechy_50",
+    "category": "Ostatné súťaže",
+    "title": "Vedomostné a projektové súťaže 2022/23",
+    "content": "Poznaj svoje mesto: 3. miesto v mestskej súťaži (Žaneta Javorčíková, Sára Husseinová, Barbora Stanovičová VIII. A). Anton Bernolák: 2. miesto v mestskej súťaži (Vivien Farkašová, Diana Baloghová, Ivana Halmešová VII. A). iBobor: Úspešní riešitelia celoslovenskej súťaže (žiaci 5. – 9. ročníka, vrátane Tomáš Paulovič, Oliver Kertész, Jakub Omasta, Lilian Schulcz, Daniel Tankó, Nikola Tináková, Lilien Drugová, Zoja Hajdáková, Žaneta Javorčíková, Sára Husseinová, Tomáš Goga, Lea Hajdáková).",
+    "keywords": [
+      "poznaj svoje mesto",
+      "Anton Bernolák",
+      "iBobor",
+      "mestská súťaž",
+      "celoslovenská súťaž",
+      "2022/23"
+    ]
+  },
+  {
+    "id": "uspechy_51",
+    "category": "Predmetové olympiády",
+    "title": "Úspechy v predmetových olympiádach 2023/24",
+    "content": "Matematická olympiáda: Samuel Farkaš VII. C – 1. miesto v okresnom kole; Peter Ferenczi V. A – úspešný riešiteľ. Dejepisná olympiáda - okresné kolo – úspešní riešitelia: Lea Hajdáková IX. A, Alexandra Vargová VIII. A, Natália Hercová VII. B, Samuel Farkaš VII. C, Lea Mésárošová VI. B, Marek Bulafčík VI. B. Biologická olympiáda: Alexandra Vargová VIII. A – 3. miesto v kategórii E-zoológia (okresné kolo). Olympiáda v anglickom jazyku: Liana Tankóová IX. B – úspešný riešiteľ.",
+    "keywords": [
+      "olympiáda",
+      "matematika",
+      "dejepis",
+      "biológia",
+      "anglický jazyk",
+      "okresné kolo",
+      "úspešný riešiteľ",
+      "2023/24"
+    ]
+  },
+  {
+    "id": "uspechy_52",
+    "category": "Športové súťaže",
+    "title": "Športové súťaže 2023/24",
+    "content": "Gymnastický štvorboj: Družstvo dievčat – 2.miesto v okresnom kole (Tamara Malíková I. A, Natália Mésarošová I. A, Sofia Krišková III. A, Karin Jajcaj III. A, Tatiana Hrabovszká IV. A). Atletika: Matúš Koszorú IX. A – 2. miesto v okresnom kole, beh na 800 m. Beh olympijského dňa: Karin Jajcaj, Vanesa Penzešová – 1. miesto; Ján Badin, Patrícia Rampášeková – 2. miesto; Veronika Mitáková – 3. miesto.",
+    "keywords": [
+      "gymnastický štvorboj",
+      "atletika",
+      "beh olympijského dňa",
+      "okresné kolo",
+      "2023/24"
+    ]
+  },
+  {
+    "id": "uspechy_53",
+    "category": "Ostatné súťaže",
+    "title": "Pytagoriáda a recitačné súťaže 2023/24",
+    "content": "Pytagoriáda: Patrícia Rampášeková III. A - 2. miesto v okresnom kole; Teodor Szeghö V. A - úspešný riešiteľ okresného kola, 4. miesto. Hviezdoslavov Kubín: Markéta Koišová V. A – 2. miesto v obvodnom a okresnom kole; Benjamín Vöros V. A – 2. miesto v obvodnom kole; Zuzana Košírelová IX. B – 3. miesto v obvodnom kole.",
+    "keywords": [
+      "pytagoriáda",
+      "Hviezdoslavov Kubín",
+      "okresné kolo",
+      "obvodné kolo",
+      "úspešný riešiteľ",
+      "2023/24"
+    ]
+  },
+  {
+    "id": "uspechy_54",
+    "category": "Ostatné súťaže",
+    "title": "Jazykové a vedomostné súťaže 2023/24",
+    "content": "Olympiáda ANJ pre 1. stupeň: Daniel Furuglyás IV. A, Michal Roman IV. C, Peter Daxner IV.C – 2. miesto v mestskom kole. Poznaj svoje mesto: 1. miesto v mestskej súťaži (Ivana Halmešová, Diana Baloghová, Vivien Farkašová VIII. A). Život a dielo Antona Bernoláka: 2. miesto v mestskej súťaži (Zoja Hajdáková VII. A, Natália Hercová, Bianka Zálešáková VII. B).",
+    "keywords": [
+      "anglický jazyk",
+      "poznaj svoje mesto",
+      "Anton Bernolák",
+      "mestská súťaž",
+      "2023/24"
+    ]
+  },
+  {
+    "id": "uspechy_55",
+    "category": "Ostatné súťaže",
+    "title": "Výtvarné, umelecké a odborné súťaže 2023/24",
+    "content": "Vesmír očami detí: Daniela Buranská VI. B – ocenenie v regionálnom kole celoslovenskej súťaže. Betlehemská hviezda: Zina Jakubčínová IX. B - umiestnenie v regionálnej súťaži; Ema Borošová II. B – 1. miesto; Paulína Poláková II. B – 2. miesto (kategória 1. – 4. ročník). Súťaž v poskytovaní prvej pomoci: Družstvo mladých zdravotníkov – 2.miesto v okresnej súťaži (žiaci 2. a 3. ročníka). iBobor: Umiestnenie na 1. – 3. mieste v celoslovenskej súťaži (žiaci 3., 5., 7., 8., 9. ročníka).",
+    "keywords": [
+      "vesmír",
+      "Betlehemská hviezda",
+      "prvá pomoc",
+      "mladí zdravotníci",
+      "iBobor",
+      "regionálne kolo",
+      "okresná súťaž",
+      "celoslovenská súťaž",
+      "2023/24"
+    ]
+  },
+  {
+    "id": "skd_1",
+    "category": "Školský klub (ŠKD)",
+    "title": "Zábavné kreslenie a skákanie v ŠKD",
+    "content": "Počasie nám prialo, slniečko sa smialo, a tak sme mali možnosť využiť krásny slnečný septembrový deň v ŠKD KAMARÁT na zábavné kreslenie na asfalt a skákanie cez švihadlo. Keď že fantázii sa medze nekladú za okamih boli farebné kresby na svete a deti si to užívali plnými dúškami. Peknými a milými kresbami skrášlili areál našej školy. Po kreslení si žiaci zmerali sily v skákaní na švihadle. Veľkú radosť im spravilo aj hádzanie frisbee a hranie piškôriek, ktoré vyskúšali všetky deti.",
+    "keywords": ["školský klub", "KAMARÁT", "kreslenie na asfalt", "švihadlo", "frisbee", "piškvorky", "zábavná aktivita", "vonku"],
+    "date": "2021-09-17",
+    "link": "https://www.zsmostna.sk/1190-zabavne-kreslenie-a-skakanie-v-skd"
+  },
+  {
+    "id": "skd_2",
+    "category": "Školský klub (ŠKD)",
+    "title": "Športovo-súťaživé popoludnie v ŠKD",
+    "content": "V školskom klube KAMARÁT sa konalo športovo-súťaživé popoludnie plné zábavy a hier. Žiaci si svoju šikovnosť, rýchlosť a obratnosť mohli preveriť na prekážkovej dráhe, ktorú vytvorili žiaci z 3. ročníka. Počasie nám konečne prialo a tak si deti naplno vychutnali loptové hry ako basketbal a futbal. Toto športové popoludnie v ŠKD sa nám vydarilo, deti si skvelo zašportovali a odchádzali domov spokojné.",
+    "keywords": ["školský klub", "KAMARÁT", "športové popoludnie", "prekážková dráha", "basketbal", "futbal", "loptové hry"],
+    "date": "2021-05-27",
+    "link": "https://www.zsmostna.sk/1169-sportovo-sutazive-popoludnie-v-skd"
+  },
+  {
+    "id": "skd_3",
+    "category": "Školský klub (ŠKD)",
+    "title": "Týždeň hlasného čítania v ŠKD",
+    "content": "Myšlienkou týždňa hlasného čítania v ŠKD bolo zblížiť svet dospelých so svetom detí prostredníctvom príbehov a rozprávok. Žiaci si priniesli do ŠKD svoje obľúbené knihy a formou krátkych úryvkov oboznámili svojich kamarátov s knihami, autormi, ktorí knihy napísali. Žiaci z 1.ročníkov vytvorili krásne ilustrácie. Čítania sa zhostili nielen pani vychovávateľky, ale aj žiaci z vyšších ročníkov.",
+    "keywords": ["školský klub", "KAMARÁT", "hlasné čítanie", "knihy", "rozprávky", "ilustrácie", "čitateľská gramotnosť"],
+    "date": "2021-04-08",
+    "link": "https://www.zsmostna.sk/1148-tyzden-hlasneho-citania-v-skd"
+  },
+  {
+    "id": "skd_4",
+    "category": "Školský klub (ŠKD)",
+    "title": "Záujmové aktivity v ŠKD KAMARÁT",
+    "content": "V školskom klube KAMARÁT kladieme veľký dôraz na rozvoj záujmov a talentu našich detí. Ponúkame gymnastický útvar pre pohybovo zdatné deti, kde sa oboznamujú so základnými cvičebnými prvkami a rozvíjajú svoju ohybnosť. Žiaci sa pravidelne zúčastňujú Majstrovstiev Nitrianskeho kraja a Majstrovstiev Slovenska v gymnastickom štvorboji. V rámci rekreačnej činnosti sa venujeme atletike a loptovým hrám ako florbal. Výtvarné aktivity vrátane maľby, kresby a modelovania rozvíjajú estetické cítenie a žiaci sa zapájajú do rôznych súťaží. Venujeme sa aj prírodovedným aktivitám, starostlivosti o rastliny, pozorovaniu prírody a ochrane vtáctva.",
+    "keywords": ["školský klub", "KAMARÁT", "záujmové aktivity", "gymnastika", "atletika", "florbal", "výtvarná výchova", "prírodoveda", "talent", "súťaže"],
+    "date": "2014-06-06",
+    "link": "https://www.zsmostna.sk/446-zaujmove-aktivity"
+  },
+  {
+    "id": "skd_5",
+    "category": "Školský klub (ŠKD)",
+    "title": "Oddelenia Školského klubu KAMARÁT",
+    "content": "Výchova v čase mimo vyučovania v školskom zariadení je cieľavedomé, zámerné, pedagogické ovplyvňovanie voľného času detí. V školskom roku 2017/2018 sme otvorili 4 oddelenia ŠKD: 1. oddelenie (Katarína Žiaková) pre 1.A a 3.A; 2. oddelenie (Eva Balažovičová) pre 1.B a 3.B; 3. oddelenie (Mgr. Petra Kocánová) pre 1.C a 2.B; 4. oddelenie (Mgr. Alžbeta Sokolová) pre 2.A a 4.A.",
+    "keywords": ["školský klub", "KAMARÁT", "oddelenia", "vychovávateľky", "ročníky", "organizácia"],
+    "date": "2014-03-29",
+    "link": "https://www.zsmostna.sk/432-oddelenia-skd"
+  },
+  {
+    "id": "skd_6",
+    "category": "Školský klub (ŠKD)",
+    "title": "Hymna školského klubu KAMARÁT",
+    "content": "Hudba: melódia hudobno-pohybovej hry. Text: Mgr. Alžbeta Sokolová. Text hymny oslavuje priateľstvo, spoluprácu a pestré aktivity v klube. Slohy hymny: 1. My sme dobrí kamaráti... 2. Pieseň, futbal, vybíjaná... 3. Dôvtip, múdrosť a srdečnosť... 4. Celý týždeň je veselo... 5. My sme dobrí kamaráti...",
+    "keywords": ["školský klub", "KAMARÁT", "hymna", "pieseň", "Alžbeta Sokolová", "identita klubu"],
+    "date": "2014-03-29",
+    "link": "https://www.zsmostna.sk/431-hymna-nasho-skolskeho-klubu"
+  },
+  {
+    "id": "skd_7",
+    "category": "Školský klub (ŠKD)",
+    "title": "Školský klub detí KAMARÁT - prezentácia",
+    "content": "Hlavným cieľom výchovy mimo vyučovania v našom školskom klube je plnohodnotne napĺňať voľný čas detí. Prispievame k ochrane detí pred nežiadúcimi sociálnymi vplyvmi a otvárame priestor na rozvoj ich špecifických schopností. Našou filozofiou je: 'Poznajúc seba samého, poznáš celý svet.' Klub poskytuje rannú službu od 6:30, kde deti môžu relaxovať, a popoludňajšie aktivity zamerané na rozvoj schopností, prípravu na vyučovanie, šport, hry a aktivity v prírode.",
+    "keywords": ["školský klub", "KAMARÁT", "ciele", "voľný čas", "ranná služba", "rozvoj schopností", "filozofia", "aktivity"],
+    "date": "2014-03-17",
+    "link": "https://www.zsmostna.sk/428-skolsky-klub-deti-kamarat"
   }
+
   ]
   
 };
