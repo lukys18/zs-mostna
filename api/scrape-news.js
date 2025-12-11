@@ -100,16 +100,40 @@ export default async function handler(req, res) {
         const dateSpan = $sub("span.ext-date").text().trim();
         const newsDate = parseNewsDate(dateSpan);
 
-        // Získaj všetky <p> tagy z div#text
-        const paragraphs = [];
-        $sub("div#text p").each((i, el) => {
-          const text = $sub(el).text().trim();
-          if (text) {
-            paragraphs.push(text);
+        // Získaj všetky textové elementy z div#text (p, ul, ol, li, h3, h4, atď.)
+        const contentParts = [];
+        $sub("div#text").children().each((i, el) => {
+          const tagName = el.tagName.toLowerCase();
+          const $el = $sub(el);
+          
+          if (tagName === 'p' || tagName === 'h3' || tagName === 'h4' || tagName === 'h5') {
+            // Odseky a nadpisy
+            const text = $el.text().trim();
+            if (text) {
+              contentParts.push(text);
+            }
+          } else if (tagName === 'ul' || tagName === 'ol') {
+            // Zoznamy - spracuj každú položku
+            const listItems = [];
+            $el.find('li').each((j, li) => {
+              const itemText = $sub(li).text().trim();
+              if (itemText) {
+                listItems.push(`• ${itemText}`);
+              }
+            });
+            if (listItems.length > 0) {
+              contentParts.push(listItems.join('\n'));
+            }
+          } else if (tagName === 'blockquote') {
+            // Citáty
+            const text = $el.text().trim();
+            if (text) {
+              contentParts.push(`> ${text}`);
+            }
           }
         });
 
-        const content = paragraphs.join("\n\n");
+        const content = contentParts.join("\n\n");
 
         // Generuj ID a keywords pre RAG systém
         const newsId = `news_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
